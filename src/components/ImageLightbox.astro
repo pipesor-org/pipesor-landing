@@ -1,0 +1,85 @@
+---
+import { content, type Locale } from '../i18n/content';
+const { locale } = Astro.props as { locale: Locale };
+const c = content[locale];
+---
+<dialog id="image-viewer" class="image-lightbox" aria-labelledby="image-viewer-title" aria-describedby="image-viewer-caption">
+  <div class="lightbox-header">
+    <h2 id="image-viewer-title">{c.lightboxTitle}</h2>
+    <div class="lightbox-actions">
+      <button type="button" data-image-zoom data-zoom-label={c.zoomImage} data-fit-label={c.fitImage}>{c.zoomImage}</button>
+      <form method="dialog"><button type="submit" autofocus>{c.closeImage}<span aria-hidden="true">×</span></button></form>
+    </div>
+  </div>
+  <div class="lightbox-media" tabindex="0" role="region" aria-label={c.lightboxTitle}><img alt="" /></div>
+  <p id="image-viewer-caption" class="lightbox-caption"></p>
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#image-viewer')!;
+  const image = dialog.querySelector<HTMLImageElement>('img')!;
+  const caption = dialog.querySelector<HTMLElement>('.lightbox-caption')!;
+  const zoom = dialog.querySelector<HTMLButtonElement>('[data-image-zoom]')!;
+  const media = dialog.querySelector<HTMLElement>('.lightbox-media')!;
+  let opener: HTMLButtonElement | null = null;
+  document.querySelectorAll<HTMLButtonElement>('[data-lightbox-src]').forEach(trigger => {
+    trigger.disabled = false;
+    trigger.addEventListener('click', () => {
+      opener = trigger;
+      const thumbnail = trigger.querySelector<HTMLImageElement>('img')!;
+      image.width = Number(trigger.dataset.imageWidth);
+      image.height = Number(trigger.dataset.imageHeight);
+      image.src = trigger.dataset.lightboxSrc!;
+      image.alt = thumbnail.alt;
+      caption.textContent = [...(trigger.closest('figure')?.querySelector('figcaption')?.children || [])].map(part => part.textContent).join(' ');
+      document.documentElement.classList.add('has-lightbox');
+      dialog.showModal();
+      media.scrollTo(0, 0);
+    });
+  });
+  zoom.addEventListener('click', () => {
+    const actual = dialog.classList.toggle('is-actual-size');
+    zoom.textContent = actual ? zoom.dataset.fitLabel! : zoom.dataset.zoomLabel!;
+    media.scrollTo(0, 0);
+  });
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.documentElement.classList.remove('has-lightbox');
+    dialog.classList.remove('is-actual-size');
+    zoom.textContent = zoom.dataset.zoomLabel!;
+    image.removeAttribute('src');
+    opener?.focus({ preventScroll: true });
+  });
+</script>
+<style>
+  :global(html.has-lightbox) { overflow: hidden; }
+  .image-lightbox { width: min(1440px, calc(100vw - 32px)); height: min(960px, calc(100dvh - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 0; border-radius: 8px; background: var(--surface); color: var(--ink); }
+  .image-lightbox[open] { display: flex; flex-direction: column; }
+  .image-lightbox::backdrop { background: rgb(0 0 0 / .78); }
+  .lightbox-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 16px 24px; flex-shrink: 0; }
+  .lightbox-header h2 { font-size: 20px; line-height: 1.3; letter-spacing: -.02em; }
+  .lightbox-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .lightbox-actions form { margin: 0; }
+  .lightbox-actions button { min-height: 44px; padding: 8px 12px; background: var(--subtle); color: var(--ink); border: 0; }
+  .lightbox-actions button:hover { background: var(--tint); }
+  .lightbox-actions button span { font-size: 24px; line-height: 1; }
+  .lightbox-media { display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: var(--bg); }
+  .lightbox-media img { display: block; width: 100%; max-width: 100%; height: 100%; object-fit: contain; }
+  .is-actual-size .lightbox-media { display: block; }
+  .is-actual-size .lightbox-media img { width: auto; height: auto; max-width: none; }
+  .lightbox-caption { padding: 16px 24px; font-size: 14px; line-height: 1.5; overflow: auto; flex-shrink: 0; max-height: 25dvh; }
+  @media (max-width: 700px) {
+    .image-lightbox { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); }
+    .lightbox-header { flex-wrap: wrap; gap: 8px; padding: 16px; }
+    .lightbox-header h2 { font-size: 16px; }
+    .lightbox-actions { width: 100%; justify-content: space-between; }
+    .lightbox-caption { padding: 16px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .image-lightbox[open] { animation: image-arrival 180ms ease-out; }
+    @keyframes image-arrival { from { opacity: .7; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  }
+</style>
