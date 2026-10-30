@@ -1,0 +1,87 @@
+---
+import '@fontsource/sora/latin-400.css';
+import '@fontsource/sora/latin-500.css';
+import '@fontsource/sora/latin-600.css';
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '../styles/global.css';
+import sora400 from '@fontsource/sora/files/sora-latin-400-normal.woff2?url';
+import sora500 from '@fontsource/sora/files/sora-latin-500-normal.woff2?url';
+import sora600 from '@fontsource/sora/files/sora-latin-600-normal.woff2?url';
+import EarlyAccess from './EarlyAccess';
+import ProductImage from './ProductImage.astro';
+import { content, type Locale } from '../i18n/content';
+import operations from '../assets/product/operations.webp';
+import validation from '../assets/product/validation.webp';
+import uncertainty from '../assets/product/uncertainty.webp';
+import historyEn from '../assets/product/history-en.webp';
+import historyEs from '../assets/product/history-es.webp';
+import insightsEn from '../assets/product/insights-en.webp';
+import insightsEs from '../assets/product/insights-es.webp';
+const { locale = 'en' } = Astro.props as { locale: Locale };
+const c = content[locale];
+const localizedLabel = `${c.screenshotLabel}${locale === 'es' ? ` · ${c.englishImage}` : ''}`;
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {[sora400, sora500, sora600].map(href => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
+    <meta name="description" content={c.description} />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta property="og:title" content={c.title} /><meta property="og:description" content={c.description} /><meta property="og:type" content="website" /><meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} /><meta property="og:image" content={new URL('/social-card.png', Astro.site).href} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Pipesor — CI/CD incidents, diagnosed with evidence. Early-stage prototype. Demo data." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="en" href={new URL('/', Astro.site).href} /><link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site).href} /><link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
+    <link rel="canonical" href={new URL(locale === 'en' ? '/' : '/es/', Astro.site).href} />
+    <link rel="icon" type="image/svg+xml" href="/branding/pipesor_symbol_primary_light_v1.0.svg" media="(prefers-color-scheme: light)" /><link rel="icon" type="image/svg+xml" href="/branding/pipesor_symbol_primary_dark_v1.0.svg" media="(prefers-color-scheme: dark)" /><link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" /><link rel="apple-touch-icon" sizes="180x180" href="/icon-180.png" />
+    <title>{c.title}</title>
+    <script is:inline>
+      (() => {
+        let preference = 'system';
+        try { const saved = localStorage.getItem('pipesor.theme'); if (['system', 'light', 'dark'].includes(saved)) preference = saved; } catch {}
+        document.documentElement.dataset.theme = preference === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.preference = preference;
+      })();
+    </script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">{c.skip}</a>
+    <header class="site-header frame">
+      <a class="brand" href={locale === 'en' ? '/' : '/es/'} aria-label={c.home}><img class="logo-light" src="/branding/pipesor_lockup_primary_light_v1.0.svg" width="1400" height="400" alt="Pipesor" /><img class="logo-dark" src="/branding/pipesor_lockup_primary_dark_v1.0.svg" width="1400" height="400" alt="Pipesor" /></a>
+      <nav aria-label={c.navLabel}>{c.nav.map((label, index) => <a href={['#workflow', '#product', '#questions'][index]}>{label}</a>)}</nav>
+      <div class="preferences"><a class="language" href={locale === 'en' ? '/es/' : '/'} lang={locale === 'en' ? 'es' : 'en'} hreflang={locale === 'en' ? 'es' : 'en'} data-language>{locale === 'en' ? 'Español' : 'English'}</a><label class="theme-control">{c.theme}<select id="theme" aria-label={c.theme}><option value="system">{c.themes[0]}</option><option value="light">{c.themes[1]}</option><option value="dark">{c.themes[2]}</option></select></label></div>
+      <a class="button header-cta" href="#early-access">{c.cta}</a>
+    </header>
+    <main id="main" class="frame">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-top"><div><h1 id="hero-title">{c.headline[0]}<br />{c.headline[1]}</h1><p class="hero-subhead">{c.subhead}</p><div class="hero-actions"><a class="button" href="#early-access">{c.cta}</a><a class="text-link" href="#workflow">{c.secondary}</a></div><p class="prototype">{c.prototype}</p><p class="small">{c.availability}</p></div><aside class="hero-aside"><p>{c.heroSide}</p><p>{c.heroAudience}</p></aside></div>
+        <ProductImage image={operations} alt={c.operationsAlt} label={localizedLabel} caption={c.operationsCaption} open={c.openImage} eager />
+      </section>
+      <section id="workflow" class="workflow section" aria-labelledby="workflow-title"><div class="section-heading"><h2 id="workflow-title">{c.workflowHeading}</h2><p>{c.workflowIntro}</p></div><ol class="workflow-steps">{c.steps.map(([title, text]) => <li><h3>{title}</h3><p>{text}</p></li>)}</ol><p class="scope-note">{c.prototypeScope}</p></section>
+      <section id="product" class="product section" aria-labelledby="uncertainty-title"><div class="section-heading"><h2 id="uncertainty-title">{c.uncertaintyHeading}</h2><div><p>{c.uncertaintyText}</p><p class="supporting"><code>INC-1045</code>: {c.uncertaintyDetail}</p></div></div><ProductImage image={uncertainty} alt={c.operationsAlt} label={localizedLabel} caption={c.uncertaintyDetail} open={c.openImage} /></section>
+      <section class="validation section" aria-labelledby="validation-title"><div class="section-heading"><h2 id="validation-title">{c.validationHeading}</h2><div><p>{c.validationText}</p><p class="supporting">{c.validationDetail}</p></div></div><ProductImage image={validation} alt={c.validationAlt} label={localizedLabel} caption={c.validationCaption} open={c.openImage} /></section>
+      <section class="memory section" aria-labelledby="memory-title"><div class="section-heading"><h2 id="memory-title">{c.memoryHeading}</h2><p>{c.memoryText}</p></div><ProductImage image={locale === 'es' ? historyEs : historyEn} alt={c.historyAlt} label={c.screenshotLabel} caption={c.historyCaption} open={c.openImage} /><details class="insights"><summary>{c.insightsSummary}</summary><ProductImage image={locale === 'es' ? insightsEs : insightsEn} alt={c.insightsAlt} label={c.screenshotLabel} caption={c.insightsCaption} open={c.openImage} /></details></section>
+      <section id="questions" class="faq section" aria-labelledby="questions-title"><h2 id="questions-title">{c.questionsHeading}</h2><div>{c.questions.map(([question, answer]) => <details name="questions"><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+      <section id="early-access" class="access section" aria-labelledby="access-title"><div><h2 id="access-title">{c.accessHeading}</h2><p>{c.accessText}</p><p class="prototype">{c.prototype}</p></div><EarlyAccess locale={locale} client:visible /></section>
+    </main>
+    <footer class="frame"><a class="brand" href="#top" aria-label={c.top}><img class="logo-light" src="/branding/pipesor_lockup_primary_light_v1.0.svg" width="1400" height="400" alt="Pipesor" /><img class="logo-dark" src="/branding/pipesor_lockup_primary_dark_v1.0.svg" width="1400" height="400" alt="Pipesor" /></a><p>{c.footer}</p><a class="text-link" href="#early-access">{c.cta}</a></footer>
+    <script>
+      const select = document.querySelector<HTMLSelectElement>('#theme')!;
+      const system = matchMedia('(prefers-color-scheme: dark)');
+      select.value = document.documentElement.dataset.preference || 'system';
+      const apply = () => {
+        const preference = select.value;
+        document.documentElement.dataset.theme = preference === 'system' ? (system.matches ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.preference = preference;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', document.documentElement.dataset.theme === 'dark' ? '#0e1116' : '#f7f8fa');
+      };
+      apply();
+      select.addEventListener('change', () => { apply(); try { localStorage.setItem('pipesor.theme', select.value); } catch {} });
+      system.addEventListener('change', () => { if (select.value === 'system') apply(); });
+      const language = document.querySelector<HTMLAnchorElement>('[data-language]')!;
+      const preserveAnchor = () => { language.hash = window.location.hash; };
+      preserveAnchor();
+      window.addEventListener('hashchange', preserveAnchor);
+    </script>
+  </body>
+</html>
