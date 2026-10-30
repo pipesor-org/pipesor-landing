@@ -15,6 +15,10 @@ describe('early access and localization', () => {
       assert.ok(!markup.includes('action='));
       assert.ok(!markup.includes('name="email"'));
       assert.ok(markup.includes(content[locale].formNotice));
+      assert.ok(markup.includes('aria-describedby="email-hint form-notice email-feedback"'));
+      assert.ok(markup.includes('id="email-feedback" class="form-feedback" role="status"></p>'));
+      assert.ok(!markup.includes('aria-invalid="true"'));
+      assert.equal((markup.match(/<button/g) || []).length, 1);
     });
   }
   test('translations have matching content shape and concise promises', () => {

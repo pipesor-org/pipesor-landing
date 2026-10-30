@@ -23,11 +23,17 @@ bun run preview --port 4321
 
 English is served at `/`, Spanish at `/es/`. The React early-access form is a local preview: it sends no data and submission remains disabled. TypeScript stays on major 6 for compatibility with the installed Astro checker.
 
+The sticky header preserves section links when switching languages. System/light/dark preferences use `pipesor.theme`; the native product screenshot selector and workflow disclosures work without JavaScript. Screenshot buttons open an accessible in-page viewer with fit/actual-size modes. Email feedback starts on blur and updates while correcting the address; registration remains disabled. Product captures retain their original theme and language, identified by their captions.
+
 ## Content and assets
 
-See the [landing brief](docs/landing-page-brief.md) for requirements and [acceptance verification](docs/refinement-verification.md) for design decisions and outstanding approvals. Product data and metrics are illustrative; copy needs owner review.
+See the [landing brief](docs/landing-page-brief.md), [focused refinement](docs/focused-refinement.md), and [previous acceptance verification](docs/refinement-verification.md) for design decisions, checks, and outstanding approvals. Product data and metrics are illustrative; copy needs owner review.
+
+The [footer refinement and MIT evaluation](docs/footer-refinement.md) records the current footer and proposed source-code licensing scope. MIT has not been adopted; rights ownership and contributor approval remain pending. Brand assets and product screenshots are excluded from the proposal.
 
 - `src/components/Landing.astro`: shared page layout.
+- `src/components/ProductImage.astro` and `ImageLightbox.astro`: responsive screenshots, demo labels, and the in-page image viewer.
+- `src/components/Brand.astro`: proportional viewport for the unmodified official wordmark.
 - `src/i18n/content.ts`: EN/ES copy.
 - `src/components/EarlyAccess.tsx`: form preview.
 - `src/styles/global.css`: brand tokens and responsive styles.
