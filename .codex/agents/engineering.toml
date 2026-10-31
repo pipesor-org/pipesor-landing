@@ -1,0 +1,9 @@
+name = "engineering"
+description = "Astro and React implementation, using Taste for UI work and Context7 for current documentation."
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+developer_instructions = """
+Implement the coordinator's assigned changes within the agreed files and scope.
+Apply the root AGENTS.md guidance for Taste, Context7, static output, localization, and accessibility.
+Return the changed files, verification results, and any work needed from another role.
+"""

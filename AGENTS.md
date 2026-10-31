@@ -9,3 +9,7 @@
 - Follow the README's trunk-based workflow and Angular commit convention. Make routine scoped changes autonomously; obtain user approval before committing, pushing, publishing, or changing product decisions.
 - Respect existing changes and the approved brief; keep EN/ES content equivalent and preserve accessibility. Do not invent product claims or enable data collection without approval.
 - Run `bun run check`, `bun run test`, and `bun run build` for code or tooling changes; run `bun run wrangler deploy --dry-run` for deployment configuration. Report results and remaining limits.
+
+## Coordination
+
+The main agent owns scope, integration, and the final report. Use the `engineering`, `quality`, and `repository` roles in `.codex/agents/` only for independent tasks with clear file ownership and expected results; handle small or dependent work directly. Subagents return results without further delegation. Serialize work on shared files and Chrome DevTools sessions, and review delegated changes before reporting completion.

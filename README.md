@@ -72,6 +72,8 @@ This setup uses the Free plan. See Cloudflare's [build configuration](https://de
 
 See [AGENTS.md](AGENTS.md) for agent boundaries, skill usage, and verification expectations.
 
+Codex discovers the `engineering`, `quality`, and `repository` roles in `.codex/agents/`, where each role sets its model and reasoning effort. Permissions and MCP connections come from the coordinating session; the main agent delegates independent work and integrates the results.
+
 ## Git workflow
 
 Use trunk-based development: make small changes and integrate into `main`, using short-lived branches when appropriate. Write commit messages in English using the Angular-style format `type(scope): subject`; scope is optional. Supported types are `build`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, and `test`. For breaking changes, explain the change in a `BREAKING CHANGE:` footer.
