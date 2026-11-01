@@ -4,7 +4,7 @@ The bilingual landing page for Pipesor, an AIOps thesis project. Built with Astr
 
 ## Development
 
-Use the Bun version pinned in `package.json` and Node version in `.node-version`. Use Bun exclusively for setup and dependency management.
+Use the Bun version pinned in `package.json` and Node version in `.node-version`. Use Bun exclusively for setup and dependency management. Install the standalone [Lefthook 2.2.2 binary](https://github.com/evilmartians/lefthook/releases/tag/v2.2.2) for your OS/architecture on `PATH` and verify `lefthook version` before setup. Lefthook and commit-message validation run without Node.js; Node remains required by the Astro/Cloudflare toolchain.
 
 ```sh
 bun install --frozen-lockfile
@@ -76,8 +76,12 @@ Codex discovers the `engineering`, `quality`, and `repository` roles in `.codex/
 
 ## Git workflow
 
-Use trunk-based development: make small changes and integrate into `main`, using short-lived branches when appropriate. Write commit messages in English using the Angular-style format `type(scope): subject`; scope is optional. Supported types are `build`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, and `test`. For breaking changes, explain the change in a `BREAKING CHANGE:` footer.
+Use trunk-based development: create short-lived `feature/<topic>` or `fix/<topic>` branches from `main`, open reviewed PRs back into `main`, and use squash merge. GitHub deletes merged branches automatically. Write commit messages in English using the Angular-style format `type(scope): subject`; scope is optional. Supported types are `build`, `ci`, `chore`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, and `test`. Mark breaking changes with `!` and/or a `BREAKING CHANGE:` footer, and explain the migration in the PR body. GitHub uses the PR title and body as the default squash message.
 
-The setup command above enables the native `commit-msg` hook using Commitlint's Angular preset. It sets this clone's `core.hooksPath` to `.githooks`, replacing any existing hooks path. Use a lowercase subject without a trailing period and keep the header within 72 characters. All messages are validated; squash or rebase integration should produce a conventional commit.
+The setup command above installs the Lefthook-managed `commit-msg` hook from `lefthook.yml`. Commitlint's pinned Conventional Commits preset runs directly with Bun, without a Node.js launcher.
 
-The `Quality` workflow validates all PR commits and the latest commit on pushes to `main`, then runs diagnostics, tests (including hook checks), the static build, and a Wrangler dry run. It does not deploy. Maintainers can require the `quality` check before merging. Commit, push, and publication actions require explicit user approval.
+On existing clones, check `git config --show-origin --get-all core.hooksPath`; if the local value is this repository's former `.githooks`, remove only that value with `git config --local --unset core.hooksPath`, then rerun `bun run setup:hooks`. Resolve any other hooks-path configuration deliberately before installing; do not reset global Git settings. Local overrides in `lefthook-local.yml` are ignored by Git.
+
+Use a lowercase subject without a trailing period and keep the header within 72 characters. All messages are validated; the final squash commit must also follow this convention.
+
+The `Quality` workflow validates all PR commits, the PR title alone, the prospective squash message (title plus body), and the latest commit on pushes to `main`, then runs diagnostics, tests (including hook checks), the static build, and a Wrangler dry run. It does not deploy. Maintainers can require the `quality` check before merging. Commit, push, and publication actions require explicit user approval.

@@ -1,5 +1,5 @@
 name = "repository"
-description = "Repository documentation, Git conventions, Commitlint, and quality CI maintenance."
+description = "Repository documentation, Git conventions, Lefthook/Commitlint, and quality CI maintenance."
 model = "gpt-6-luna"
 model_reasoning_effort = "high"
 developer_instructions = """
