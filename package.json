@@ -9,8 +9,8 @@
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0",
     "check": "astro check",
-    "setup:hooks": "git config --local core.hooksPath .githooks",
-    "commitlint": "commitlint",
+    "setup:hooks": "lefthook install",
+    "commitlint": "bun ./node_modules/@commitlint/cli/cli.js",
     "test": "bun test && sh tests/commit-msg.sh"
   },
   "dependencies": {
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
     "@commitlint/cli": "21.2.4",
-    "@commitlint/config-angular": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
     "@types/bun": "^1.4.4",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

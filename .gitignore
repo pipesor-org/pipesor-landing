@@ -10,3 +10,5 @@ dist/
 .taste-skill/refine/before/
 .taste-skill/refine/after/
 .taste-skill/refine/inspect/
+
+lefthook-local.yml

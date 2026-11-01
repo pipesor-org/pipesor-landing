@@ -15,7 +15,7 @@
       "devDependencies": {
         "@astrojs/check": "^0.9.12",
         "@commitlint/cli": "21.2.4",
-        "@commitlint/config-angular": "21.2.4",
+        "@commitlint/config-conventional": "21.2.4",
         "@types/bun": "^1.4.4",
         "@types/react": "^19.3.0",
         "@types/react-dom": "^19.3.0",
@@ -116,10 +116,6 @@
     "@cloudflare/workerd-windows-64": ["@cloudflare/workerd-windows-64@1.20261023.1", "", { "os": "win32", "cpu": "x64" }, "sha512-279WLVjNsMycAwr0EZNiNEf0l2SY6NUtsN80NwZzbTHzakmiN+WSx4w38muxPm+PAU0oSPPAPXKVD+H6Hya8xw=="],
 
     "@commitlint/cli": ["@commitlint/cli@21.2.4", "", { "dependencies": { "@commitlint/config-conventional": "^21.2.4", "@commitlint/format": "^21.2.3", "@commitlint/lint": "^21.2.4", "@commitlint/load": "^21.2.4", "@commitlint/read": "^21.2.3", "@commitlint/types": "^21.2.3", "tinyexec": "^1.0.0", "yargs": "^18.0.0" }, "bin": { "commitlint": "cli.js" } }, "sha512-g3M/wrQdElqGH5vROIeL2QiYIxrzqUkhCgsDyDlWfKEyQdCt10OyMB28W2cJtpZ+VNGMvmaN923infr1hOfyrg=="],
-
-    "@commitlint/config-angular": ["@commitlint/config-angular@21.2.4", "", { "dependencies": { "@commitlint/config-angular-type-enum": "^21.0.1" } }, "sha512-t+KYwW7x3hnWCrlzwGXrJePAs352f1VYPA+1G0XYgi81dMR5hWAJbO4XFe4l3BSjY/Ju2XBOUk8VksNdiIP72g=="],
-
-    "@commitlint/config-angular-type-enum": ["@commitlint/config-angular-type-enum@21.0.1", "", {}, "sha512-xTQlgHTaQyXfFpPI3w2dI7ppuTDWmF++1W/kgNohRpxhBzAoJxc6Q/2P7EjvJodtVl7+38xHyu0STtV4ERXdhg=="],
 
     "@commitlint/config-conventional": ["@commitlint/config-conventional@21.2.4", "", { "dependencies": { "@commitlint/types": "^21.2.3", "conventional-changelog-conventionalcommits": "^10.0.0" } }, "sha512-IRldtwgNmR0SySR7wizFbhRmq45lPt6H3XCNTMyVN7jrPLgi8JlTRR6Eg1HLWUQt9P1Lh3k6eY25ilDa47EE6w=="],
 
