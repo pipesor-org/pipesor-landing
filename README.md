@@ -1,10 +1,22 @@
-# pipesor-landing
+# Pipesor landing
 
-The bilingual landing page for Pipesor, an AIOps thesis project. Built with Astro + React and deployed as static assets on Cloudflare Workers.
+The bilingual public-facing landing page for Pipesor, an AIOps thesis project. This repository contains the Astro + React site and its static Cloudflare Workers deployment configuration.
 
-## Development
+## Current state
 
-Use the Bun version pinned in `package.json` and Node version in `.node-version`. Use Bun exclusively for setup and dependency management. Install the standalone [Lefthook 2.2.2 binary](https://github.com/evilmartians/lefthook/releases/tag/v2.2.2) for your OS/architecture on `PATH` and verify `lefthook version` before setup. Lefthook and commit-message validation run without Node.js; Node remains required by the Astro/Cloudflare toolchain.
+- English is served at `/`; Spanish at `/es/`.
+- Product captures show prototype data; displayed metrics are illustrative. Copy still needs owner review.
+- The early-access form is a local preview: submission is disabled and no data is sent.
+- Production publication requires explicit approval. Deployment configuration does not confirm that a production site is live.
+- No source-code license has been adopted. Ownership and contributor approval remain pending; the MIT proposal excludes brand assets and product screenshots.
+
+## Requirements and setup
+
+Run commands from the repository root. Use Bun exclusively for setup and dependency management.
+
+- Bun: use the version pinned in [package.json](package.json).
+- Node.js: use the version pinned in [.node-version](.node-version); the Astro/Cloudflare toolchain requires it.
+- Standalone [Lefthook 2.2.2](https://github.com/evilmartians/lefthook/releases/tag/v2.2.2): install the binary for your OS/architecture on `PATH` and verify `lefthook version`. Hooks and commit-message validation run with Lefthook and Bun, without a Node.js launcher.
 
 ```sh
 bun install --frozen-lockfile
@@ -12,76 +24,50 @@ bun run setup:hooks
 bun run dev
 ```
 
-Open the URL printed by Astro. Before submitting changes, run:
+Open the URL printed by Astro. TypeScript remains on major 6 for compatibility with the installed Astro checker.
+
+For existing clones, inspect `git config --show-origin --get-all core.hooksPath`. If the local value is the former `.githooks`, remove only that value with `git config --local --unset core.hooksPath`, then rerun `bun run setup:hooks`. Resolve other hooks-path configurations before installing; do not reset global Git settings. Optional `lefthook-local.yml` overrides are ignored by Git.
+
+## Verification
+
+Before submitting changes:
 
 ```sh
 bun run check
 bun run test
 bun run build
-bun run preview --port 4321
 ```
 
-English is served at `/`, Spanish at `/es/`. The React early-access form is a local preview: it sends no data and submission remains disabled. TypeScript stays on major 6 for compatibility with the installed Astro checker.
+These commands run Astro diagnostics, tests including commit-message hook checks, and the static build. After building, use `bun run preview --port 4321` for manual browser verification; it is an interactive server, not an automated check. Follow [AGENTS.md](AGENTS.md) for the required UI verification scope.
 
-The sticky header preserves section links when switching languages. System/light/dark preferences use `pipesor.theme`; the native product screenshot selector and workflow disclosures work without JavaScript. Screenshot buttons open an accessible in-page viewer with fit/actual-size modes. Email feedback starts on blur and updates while correcting the address; registration remains disabled. Product captures retain their original theme and language, identified by their captions.
+For deployment configuration changes, also run `bun run wrangler deploy --dry-run` after building. The [Quality workflow](.github/workflows/quality.yml) checks commit and squash-message conventions, diagnostics, tests, the build, and deployment configuration. It does not deploy.
 
-## Content and assets
+## Repository guide
 
-See the [landing brief](docs/landing-page-brief.md), [focused refinement](docs/focused-refinement.md), and [previous acceptance verification](docs/refinement-verification.md) for design decisions, checks, and outstanding approvals. Product data and metrics are illustrative; copy needs owner review.
-
-The [footer refinement and MIT evaluation](docs/footer-refinement.md) records the current footer and proposed source-code licensing scope. MIT has not been adopted; rights ownership and contributor approval remain pending. Brand assets and product screenshots are excluded from the proposal.
-
-- `src/components/Landing.astro`: shared page layout.
-- `src/components/ProductImage.astro` and `ImageLightbox.astro`: responsive screenshots, demo labels, and the in-page image viewer.
-- `src/components/Brand.astro`: proportional viewport for the unmodified official wordmark.
-- `src/i18n/content.ts`: EN/ES copy.
-- `src/components/EarlyAccess.tsx`: form preview.
-- `src/styles/global.css`: brand tokens and responsive styles.
-- `src/assets/product/` and `public/branding/`: product captures and approved logos.
-- `public/licenses/`: bundled font licenses.
-
-## Cloudflare Workers deployment
-
-`wrangler.jsonc` serves Astro's static `dist/` output through Workers Static Assets. Workers Builds handles production and branch previews.
-
-After publication is approved, connect `pipesor-org/pipesor-landing` to Workers Builds. Grant the Cloudflare GitHub app access to this repository and use the Worker name `pipesor-landing` to match Wrangler. Configure:
-
-| Setting | Value |
+| Location | Purpose |
 | --- | --- |
-| Root directory | Repository root |
-| Production branch | `main` (automatic deployments enabled) |
-| Preview builds | Enabled for non-production branches |
-| Build variable | `SKIP_DEPENDENCY_INSTALL=1` |
-| Build variable | `SITE_URL=https://<approved-production-host>` |
-| Build command | `bun install --frozen-lockfile && bun run build` |
-| Deploy command | `bun run wrangler deploy` |
-| Preview command | `bun run wrangler preview` |
+| `src/components/` | Shared layout, screenshot viewer, branding, and local form preview |
+| `src/i18n/content.ts` | English and Spanish copy |
+| `src/styles/global.css` | Brand tokens and responsive styles |
+| `src/assets/product/`, `public/branding/` | Product captures and approved logos |
+| `public/licenses/` | Bundled font licenses |
 
-Use the assigned `workers.dev` hostname until a custom domain is available. Set `SITE_URL` for production and preview builds to the approved production origin for canonical links; local builds default to `http://localhost:4321`. Validate deployment configuration without deploying:
+Documentation:
 
-```sh
-bun run build
-bun run wrangler deploy --dry-run
-```
+- [Landing brief](docs/landing-page-brief.md): product and brand requirements.
+- [Focused refinement](docs/focused-refinement.md): interaction and design decisions; [previous acceptance verification](docs/refinement-verification.md) records earlier checks.
+- [Footer refinement and licensing proposal](docs/footer-refinement.md): footer decisions, pending ownership, and proposed code-only MIT scope.
+- [Deployment guide](docs/deployment.md): Workers Builds settings, canonical origin, and preview visibility.
+- [Agent guidance](AGENTS.md): boundaries, roles, skills, and verification expectations.
 
-Previews are public by default; use Cloudflare Access if private reviews are needed. The site requires no application secrets. Any future secrets must stay out of static output and use separate production/preview settings.
+Verification reports record their original scope and results; they are not evidence that the current checkout has been retested.
 
-This setup uses the Free plan. See Cloudflare's [build configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/), [branch builds](https://developers.cloudflare.com/workers/ci-cd/builds/build-branches/), and [current limits](https://developers.cloudflare.com/workers/ci-cd/builds/limits-and-pricing/).
+## Deployment
 
-## Agent guidance
+[wrangler.jsonc](wrangler.jsonc) serves the static `dist/` output. The documented Workers Builds setup uses `main` for production and other branches for previews; it is separate from the staged service-promotion model. Configure or publish it only after approval, following the [deployment guide](docs/deployment.md).
 
-See [AGENTS.md](AGENTS.md) for agent boundaries, skill usage, and verification expectations.
+## Contribution
 
-Codex discovers the `engineering`, `quality`, and `repository` roles in `.codex/agents/`, where each role sets its model and reasoning effort. Permissions and MCP connections come from the coordinating session; the main agent delegates independent work and integrates the results.
+Follow the [Pipesor contribution guidelines](https://github.com/pipesor-org/.github/blob/main/CONTRIBUTING.md) for branching, English Angular-style Conventional Commits, reviews, and squash merges. Use short-lived `feature/<topic>` or `fix/<topic>` branches from `main` and open PRs back into `main`.
 
-## Git workflow
-
-Use trunk-based development: create short-lived `feature/<topic>` or `fix/<topic>` branches from `main`, open reviewed PRs back into `main`, and use squash merge. GitHub deletes merged branches automatically. Write commit messages in English using the Angular-style format `type(scope): subject`; scope is optional. Supported types are `build`, `ci`, `chore`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, and `test`. Mark breaking changes with `!` and/or a `BREAKING CHANGE:` footer, and explain the migration in the PR body. GitHub uses the PR title and body as the default squash message.
-
-The setup command above installs the Lefthook-managed `commit-msg` hook from `lefthook.yml`. Commitlint's pinned Conventional Commits preset runs directly with Bun, without a Node.js launcher.
-
-On existing clones, check `git config --show-origin --get-all core.hooksPath`; if the local value is this repository's former `.githooks`, remove only that value with `git config --local --unset core.hooksPath`, then rerun `bun run setup:hooks`. Resolve any other hooks-path configuration deliberately before installing; do not reset global Git settings. Local overrides in `lefthook-local.yml` are ignored by Git.
-
-Use a lowercase subject without a trailing period and keep the header within 72 characters. All messages are validated; the final squash commit must also follow this convention.
-
-The `Quality` workflow validates all PR commits, the PR title alone, the prospective squash message (title plus body), and the latest commit on pushes to `main`, then runs diagnostics, tests (including hook checks), the static build, and a Wrangler dry run. It does not deploy. Maintainers can require the `quality` check before merging. Commit, push, and publication actions require explicit user approval.
+Local commit-message checks are defined in [commitlint.config.js](commitlint.config.js) and [lefthook.yml](lefthook.yml): lowercase scopes and subjects, no trailing period, and a maximum 72-character header. CI also validates the PR title and prospective squash message. For agent work, committing, pushing, and publishing require explicit user approval as defined in [AGENTS.md](AGENTS.md).
