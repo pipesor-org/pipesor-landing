@@ -41,6 +41,7 @@ const localizedLabel = `${c.screenshotLabel}${locale === 'es' ? ` · ${c.english
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="alternate" hreflang="en" href={new URL('/', Astro.site).href} /><link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site).href} /><link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" type="application/xml" href={new URL('/sitemap.xml', Astro.site).href} />
     <link rel="icon" type="image/svg+xml" href="/branding/pipesor_symbol_primary_light_v1.0.svg" media="(prefers-color-scheme: light)" /><link rel="icon" type="image/svg+xml" href="/branding/pipesor_symbol_primary_dark_v1.0.svg" media="(prefers-color-scheme: dark)" /><link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" /><link rel="apple-touch-icon" sizes="180x180" href="/icon-180.png" />
     <title>{c.title}</title>
     <script is:inline>
