@@ -11,7 +11,7 @@ The existing Taste direction remains **Dressed as something else**, seed **18226
 Idea: **The footer closes Pipesor's investigation story with the project and people behind it.** The practical interaction is ordinary accessible navigation, with a clear difference between live links and planned information.
 
 - Official branding and a concise description form one identity block.
-- Project links include the product section and the exact supplied `pipesor-landing` repository URL.
+- The product section remains linked. The owner subsequently confirmed that `pipesor-landing` is private and approved showing its name as non-link text labeled "Private repository" / "Repositorio privado".
 - `pipesor-docs` is labeled as planned documentation and has no invented URL, link, or keyboard stop.
 - Jhon Galvez and Ramiro Guzman link to the GitHub profiles supplied by the owner.
 - Privacy Policy and Terms of Use are separate, visibly pending text entries, not fake links or policy pages.
