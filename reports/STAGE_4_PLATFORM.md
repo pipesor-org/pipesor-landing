@@ -2,6 +2,20 @@
 
 Read-only observations on 2026-11-02. Worker: `pipesor-landing`; approved production origin: `https://pipesor-landing.jhon-galvezchambi.workers.dev`. Source branch `feature/landing-recovery` is based on merged `a0293cffb5a16eb2fa1b7683e3b2b048e449c4a9`. No remote setting, binding, build variable, access policy, repository protection, deployment or transport control was modified. Environment and secret values were not retrieved for this review.
 
+## Resolution update
+
+The owner added the approved `SITE_URL` to Cloudflare Preview base build settings. A new branch `feature/test-preview-site-url` inherited the correct public origin, and its Cloudflare Preview build `ba16771f-2994-45f3-b2dc-af55b65d3523` completed successfully. The previous Preview for `feature/landing-reports` retained its old settings and still lacked `SITE_URL` at the last check; update it individually if it needs another build. No bulk Preview update was performed.
+
+LAND-015's inspection and documentation are resolved with explicit limitations: GitHub branch-protection/ruleset endpoints returned plan-related HTTP 403, so required-check enforcement is unknown; remote build/deploy command differences from the documented Bun workflow remain recorded, not changed. A sampled preview was publicly accessible with `noindex`; this is not access control or a guarantee about every Preview. Cloudflare's documented default content-signals notice expressed no specific preferences when no origin robots file was present. PR #10 subsequently added a sitemap-only origin file and the default notice disappeared; the owner accepted that outcome. Do not infer unpublished bot policies or current settings from this response alone.
+
+## Later read-only build-variable verification
+
+The owner observed that production builds succeed while short-lived branch builds fail. A subsequent Cloudflare MCP inspection confirmed that production build settings contain a non-secret `SITE_URL` matching the approved production origin, while the Preview base configuration contains no `SITE_URL`. The listed existing Preview for `feature/landing-reports` also has no `SITE_URL` in its own settings. Preview builds are enabled. Production and Preview build commands are both `bun run build`; the respective deploy commands are `npx wrangler deploy` and `npx wrangler preview`. Only the relevant variable's presence and a comparison against the approved public origin were reported; no secret values were recorded.
+
+This directly explains why the inspected Preview configuration cannot pass the build-only origin guard. Previously observed branch build logs failed at that guard, although this inspection does not prove every historical branch had identical settings. The production trigger's `branch_includes: [main]` in the older observation applies to that trigger; the separate Preview configuration is enabled, so it must not be interpreted as proof that branch builds are disabled.
+
+Cloudflare documents that updating Preview base settings affects future Previews, while existing Previews need an explicit existing-preview update or individual adjustment. No configuration was changed. A proposed minimal correction is the approved production origin as `SITE_URL` in Preview base settings, with the existing Preview handled as needed; a successful new branch build is required to validate it. Any remote update remains subject to owner approval. [Cloudflare Workers Builds API](https://developers.cloudflare.com/workers/ci-cd/builds/api-reference/)
+
 ## LAND-015 — remote state and release association
 
 The Cloudflare MCP discovered the Worker by exact name and returned its settings, subdomain state, build trigger, deployment and version metadata. Returned script settings report compatibility date `2026-10-30`, no compatibility flags and no bindings. The settings response did not expose an assets-routing configuration; this is not evidence that the deployed static assets are absent. The production Workers URL and version-preview URLs are enabled.
@@ -20,7 +34,7 @@ The active GitHub-linked build trigger reports:
 | Build command | `bun run build` |
 | Deploy command | `npx wrangler deploy` |
 
-These are observed remote command strings, not commands executed in this task. They differ from the repository's intended Bun-only setup (`bun install --frozen-lockfile && bun run build`, `bun run wrangler deploy`, and separate non-production preview builds). No remote change was made. The script-level preview switch does not demonstrate that non-main branch builds are configured; the inspected trigger includes only `main`.
+These are observed remote command strings, not commands executed in this task. They differ from the repository's intended Bun-only setup (`bun install --frozen-lockfile && bun run build`, `bun run wrangler deploy`, and separate non-production preview builds). No remote change was made. The older trigger observation alone does not describe separate Preview settings; the later inspection above confirms Previews are enabled.
 
 The failed Stage 3 branch build `b621ab77-6940-4678-9d92-e02b62326378` stopped at the public-origin guard (`Builds require SITE_URL` in `astro:config:setup`). The log was reduced to known error-class flags; no variable values or unrelated logs were retained. This establishes the failure class, not the absent/malformed variable's exact cause. The merged production build passed independently. Public canonical metadata and the repository CI environment use the approved origin; private remote variable values were not inspected.
 

@@ -31,3 +31,7 @@ Read against the approved landing brief, current backlog and existing static pre
 4. Complete the still-pending owner review of the full EN/ES copy and audience. Test comprehension with representative readers before claiming that wording improves conversion.
 
 These boundaries preserve the current no-collection preview. Approval to edit source does not, by itself, approve public publication, data collection, analytics or activation.
+
+## Later owner decision — LAND-017
+
+The owner explicitly deferred registration and data-handling prerequisites until real registration is planned. The email-announcement-list approach was discussed as a proposal only; no provider, responsible party, retention period, contact channel or disclosure was approved. LAND-019 remains deferred and collection disabled.
