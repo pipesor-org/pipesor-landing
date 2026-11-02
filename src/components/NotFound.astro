@@ -1,0 +1,61 @@
+---
+import '@fontsource/sora/latin-400.css';
+import '@fontsource/sora/latin-500.css';
+import '@fontsource/sora/latin-600.css';
+import '../styles/global.css';
+import Brand from './Brand.astro';
+import type { Locale } from '../i18n/content';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const home = locale === 'es' ? '/es/' : '/';
+const copy = locale === 'es' ? {
+  title: 'Página no encontrada',
+  description: 'La página que buscas no está disponible. Puedes volver al inicio o explorar el producto.',
+  home: 'Volver al inicio',
+  product: 'Explorar el producto',
+  navigation: 'Enlaces de recuperación',
+} : {
+  title: 'Page not found',
+  description: 'The page you are looking for is unavailable. You can return home or explore the product.',
+  home: 'Back to home',
+  product: 'Explore the product',
+  navigation: 'Recovery links',
+};
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{copy.title} — Pipesor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" />
+    <script is:inline>
+      (() => {
+        let preference = 'system';
+        try { const saved = localStorage.getItem('pipesor.theme'); if (['system', 'light', 'dark'].includes(saved)) preference = saved; } catch {}
+        document.documentElement.dataset.theme = preference === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.preference = preference;
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="frame recovery-header"><a class="brand" href={home} aria-label={copy.home}><Brand /></a></header>
+    <main class="frame recovery">
+      <h1>{copy.title}</h1>
+      <p>{copy.description}</p>
+      <nav aria-label={copy.navigation}>
+        <a class="button" href={home}>{copy.home}</a>
+        <a class="text-link" href={`${home}#product`}>{copy.product}</a>
+      </nav>
+    </main>
+  </body>
+</html>
+
+<style>
+  .recovery-header { padding-block: 32px; }
+  .recovery { padding-block: 64px; }
+  .recovery p { margin-top: 24px; max-width: 60ch; }
+  .recovery nav { margin-top: 32px; align-items: center; flex-wrap: wrap; }
+</style>

@@ -22,5 +22,6 @@ export default defineConfig({
     },
   }],
   site: site || 'http://localhost:4321',
+  build: { format: 'preserve' },
   i18n: { defaultLocale: 'en', locales: ['en', 'es'], routing: { prefixDefaultLocale: false } },
 });
