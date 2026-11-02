@@ -1,0 +1,254 @@
+[
+  {
+    "locale": "en",
+    "width": 1440,
+    "theme": "light",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"dpr\":1.0000000298023224,\"lang\":\"en\",\"ctas\":[{\"text\":\"Preview\",\"aria\":\"Preview early access\"},{\"text\":\"Preview early access↓\",\"aria\":null}],\"footer\":\"Evidence-backed diagnosis for GitHub Actions. An early-stage AIOps thesis project.\\n\\nProject\\nProduct overview\\npipesor-landing\\nPrivate repository\\npipesor-docs\\nDocumentation planned\\nContributors\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPrivacy Policy\\nPending\\nTerms of Use\\nPending\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "theme": "dark",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"dpr\":1.0000000298023224,\"lang\":\"en\",\"ctas\":[{\"text\":\"Preview\",\"aria\":\"Preview early access\"},{\"text\":\"Preview early access↓\",\"aria\":null}],\"footer\":\"Evidence-backed diagnosis for GitHub Actions. An early-stage AIOps thesis project.\\n\\nProject\\nProduct overview\\npipesor-landing\\nPrivate repository\\npipesor-docs\\nDocumentation planned\\nContributors\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPrivacy Policy\\nPending\\nTerms of Use\\nPending\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "theme": "light",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"dpr\":1.0000000298023224,\"lang\":\"en\",\"ctas\":[{\"text\":\"Preview\",\"aria\":\"Preview early access\"},{\"text\":\"Preview early access↓\",\"aria\":null}],\"footer\":\"Evidence-backed diagnosis for GitHub Actions. An early-stage AIOps thesis project.\\n\\nProject\\nProduct overview\\npipesor-landing\\nPrivate repository\\npipesor-docs\\nDocumentation planned\\nContributors\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPrivacy Policy\\nPending\\nTerms of Use\\nPending\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "theme": "dark",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"dpr\":1.0000000298023224,\"lang\":\"en\",\"ctas\":[{\"text\":\"Preview\",\"aria\":\"Preview early access\"},{\"text\":\"Preview early access↓\",\"aria\":null}],\"footer\":\"Evidence-backed diagnosis for GitHub Actions. An early-stage AIOps thesis project.\\n\\nProject\\nProduct overview\\npipesor-landing\\nPrivate repository\\npipesor-docs\\nDocumentation planned\\nContributors\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPrivacy Policy\\nPending\\nTerms of Use\\nPending\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "theme": "light",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"dpr\":1.0000000298023224,\"lang\":\"en\",\"ctas\":[{\"text\":\"Preview\",\"aria\":\"Preview early access\"},{\"text\":\"Preview early access↓\",\"aria\":null}],\"footer\":\"Evidence-backed diagnosis for GitHub Actions. An early-stage AIOps thesis project.\\n\\nProject\\nProduct overview\\npipesor-landing\\nPrivate repository\\npipesor-docs\\nDocumentation planned\\nContributors\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPrivacy Policy\\nPending\\nTerms of Use\\nPending\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "theme": "dark",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"dpr\":1.0000000298023224,\"lang\":\"en\",\"ctas\":[{\"text\":\"Preview\",\"aria\":\"Preview early access\"},{\"text\":\"Preview early access↓\",\"aria\":null}],\"footer\":\"Evidence-backed diagnosis for GitHub Actions. An early-stage AIOps thesis project.\\n\\nProject\\nProduct overview\\npipesor-landing\\nPrivate repository\\npipesor-docs\\nDocumentation planned\\nContributors\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPrivacy Policy\\nPending\\nTerms of Use\\nPending\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "es",
+    "width": 1440,
+    "theme": "light",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"dpr\":1.0000000298023224,\"lang\":\"es\",\"ctas\":[{\"text\":\"Vista previa\",\"aria\":\"Vista previa del acceso anticipado\"},{\"text\":\"Vista previa del acceso anticipado↓\",\"aria\":null}],\"footer\":\"Diagnóstico con evidencias para GitHub Actions. Un proyecto de tesis AIOps en desarrollo.\\n\\nProyecto\\nVista del producto\\npipesor-landing\\nRepositorio privado\\npipesor-docs\\nDocumentación prevista\\nColaboradores\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPolítica de privacidad\\nPendiente\\nTérminos de uso\\nPendiente\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "es",
+    "width": 1440,
+    "theme": "dark",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"dpr\":1.0000000298023224,\"lang\":\"es\",\"ctas\":[{\"text\":\"Vista previa\",\"aria\":\"Vista previa del acceso anticipado\"},{\"text\":\"Vista previa del acceso anticipado↓\",\"aria\":null}],\"footer\":\"Diagnóstico con evidencias para GitHub Actions. Un proyecto de tesis AIOps en desarrollo.\\n\\nProyecto\\nVista del producto\\npipesor-landing\\nRepositorio privado\\npipesor-docs\\nDocumentación prevista\\nColaboradores\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPolítica de privacidad\\nPendiente\\nTérminos de uso\\nPendiente\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "es",
+    "width": 768,
+    "theme": "light",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"dpr\":1.0000000298023224,\"lang\":\"es\",\"ctas\":[{\"text\":\"Vista previa\",\"aria\":\"Vista previa del acceso anticipado\"},{\"text\":\"Vista previa del acceso anticipado↓\",\"aria\":null}],\"footer\":\"Diagnóstico con evidencias para GitHub Actions. Un proyecto de tesis AIOps en desarrollo.\\n\\nProyecto\\nVista del producto\\npipesor-landing\\nRepositorio privado\\npipesor-docs\\nDocumentación prevista\\nColaboradores\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPolítica de privacidad\\nPendiente\\nTérminos de uso\\nPendiente\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "es",
+    "width": 768,
+    "theme": "dark",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"dpr\":1.0000000298023224,\"lang\":\"es\",\"ctas\":[{\"text\":\"Vista previa\",\"aria\":\"Vista previa del acceso anticipado\"},{\"text\":\"Vista previa del acceso anticipado↓\",\"aria\":null}],\"footer\":\"Diagnóstico con evidencias para GitHub Actions. Un proyecto de tesis AIOps en desarrollo.\\n\\nProyecto\\nVista del producto\\npipesor-landing\\nRepositorio privado\\npipesor-docs\\nDocumentación prevista\\nColaboradores\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPolítica de privacidad\\nPendiente\\nTérminos de uso\\nPendiente\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "es",
+    "width": 390,
+    "theme": "light",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"dpr\":1.0000000298023224,\"lang\":\"es\",\"ctas\":[{\"text\":\"Vista previa\",\"aria\":\"Vista previa del acceso anticipado\"},{\"text\":\"Vista previa del acceso anticipado↓\",\"aria\":null}],\"footer\":\"Diagnóstico con evidencias para GitHub Actions. Un proyecto de tesis AIOps en desarrollo.\\n\\nProyecto\\nVista del producto\\npipesor-landing\\nRepositorio privado\\npipesor-docs\\nDocumentación prevista\\nColaboradores\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPolítica de privacidad\\nPendiente\\nTérminos de uso\\nPendiente\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "es",
+    "width": 390,
+    "theme": "dark",
+    "probe": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"dpr\":1.0000000298023224,\"lang\":\"es\",\"ctas\":[{\"text\":\"Vista previa\",\"aria\":\"Vista previa del acceso anticipado\"},{\"text\":\"Vista previa del acceso anticipado↓\",\"aria\":null}],\"footer\":\"Diagnóstico con evidencias para GitHub Actions. Un proyecto de tesis AIOps en desarrollo.\\n\\nProyecto\\nVista del producto\\npipesor-landing\\nRepositorio privado\\npipesor-docs\\nDocumentación prevista\\nColaboradores\\nJhon Galvez\\nRamiro Guzman\\nLegal\\nPolítica de privacidad\\nPendiente\\nTérminos de uso\\nPendiente\",\"repoAnchor\":false,\"overflow\":false}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  }
+]

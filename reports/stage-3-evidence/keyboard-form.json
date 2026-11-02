@@ -1,0 +1,56 @@
+[
+  {
+    "locale": "en",
+    "anchor": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"hash\":\"#early-access\",\"sectionTop\":152.3125,\"headerBottom\":120.15625,\"active\":\"<body id=\\\"top\\\"><a class=\\\"skip-link\\\" href=\\\"#main\\\">Skip to content</a><header class=\\\"site-header\\\"><div class=\\\"header-inner frame\\\"><a class=\\\"brand\\\" href=\\\"/\\\" aria-label=\\\"Pipesor home\\\"><svg class=\\\"brand-art logo-light\\\" viewBo\",\"form\":true,\"disabled\":true,\"notice\":\"Development preview only. Submission is disabled while data handling, privacy disclosures, and the destination are being approved.\"}\n```"
+        }
+      ]
+    },
+    "safety": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"hash\":\"#early-access\",\"method\":\"dialog\",\"action\":null,\"inputName\":null,\"disabled\":true,\"feedback\":\"The format is valid. Registration is still disabled; nothing has been sent or stored.\",\"submits\":[],\"dataRequests\":[]}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "es",
+    "anchor": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"hash\":\"#early-access\",\"sectionTop\":152.23959350585938,\"headerBottom\":120.15625,\"active\":\"<body id=\\\"top\\\"><a class=\\\"skip-link\\\" href=\\\"#main\\\">Saltar al contenido</a><header class=\\\"site-header\\\"><div class=\\\"header-inner frame\\\"><a class=\\\"brand\\\" href=\\\"/es/\\\" aria-label=\\\"Inicio de Pipesor\\\"><svg class=\\\"brand-art logo-l\",\"form\":true,\"disabled\":true,\"notice\":\"Solo es una vista previa de desarrollo. Los envíos están desactivados hasta aprobar el tratamiento de datos, la información de privacidad y su destino.\"}\n```"
+        }
+      ]
+    },
+    "safety": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"hash\":\"#early-access\",\"method\":\"dialog\",\"action\":null,\"inputName\":null,\"disabled\":true,\"feedback\":\"El formato es válido. El registro sigue desactivado; no se ha enviado ni guardado nada.\",\"submits\":[],\"dataRequests\":[]}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  }
+]
