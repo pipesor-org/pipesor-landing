@@ -74,8 +74,6 @@ nav a:hover, .text-link:hover { color: var(--accent); }
 .button:hover { background: var(--accent-hover); transform: translateY(-2px); }
 .button:active, button:active { transform: translateY(1px); }
 button:disabled { cursor: not-allowed; color: var(--secondary); background: var(--subtle); border-color: var(--border); }
-.secondary-button { background: var(--surface); color: var(--ink); border-color: var(--border); }
-.secondary-button:hover { background: var(--tint); }
 .text-link { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; font-size: 14px; }
 .text-link:hover { text-decoration-thickness: 2px; }
 .hero { padding-top: 64px; }

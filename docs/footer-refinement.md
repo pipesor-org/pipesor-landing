@@ -1,6 +1,6 @@
-# Footer composition and source-code license proposal
+# Footer composition and source-code licensing
 
-This is a footer-only iteration that reuses the existing landing-page verification. The owner approved the implementation and authorized committing, pushing a review branch, and opening a pull request. Production deployment and license adoption remain unapproved.
+The footer retains the approved composition and distinguishes live links from private or planned resources. The owner approved code-only MIT licensing for 2026 and confirmed Ramiro’s approval of the same terms. Publication of subsequent changes still requires approval.
 
 ## Composition
 
@@ -15,29 +15,22 @@ Idea: **The footer closes Pipesor's investigation story with the project and peo
 - `pipesor-docs` is labeled as planned documentation and has no invented URL, link, or keyboard stop.
 - Jhon Galvez and Ramiro Guzman link to the GitHub profiles supplied by the owner.
 - Privacy Policy and Terms of Use are separate, visibly pending text entries, not fake links or policy pages.
-- The licensing notice is secondary to navigation. It says approval is pending and excludes branding and product screenshots from the proposal.
-- The copyright year is rendered at build time. Its holder remains an explicit placeholder until rights ownership is confirmed; contributor credit is not treated as proof of copyright ownership.
+- The licensing notice is secondary to navigation. It identifies the MIT source-code license and explicitly reserves rights in the Pipesor name, logo, branding, visual identity, product screenshots and social media artwork. Third-party materials retain their own licenses.
+- The copyright notice uses the approved 2026 year and the full names Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez. The owner supplied the rights-holder names and confirmed contributor approval; contributor profile links alone are not treated as evidence of ownership.
 
 Desktop uses a compact identity column and three aligned information groups. Phone layouts give the identity its own row, pair project/contributor information, and place policy placeholders together below. A flat surface change closes the page without borders, decorative cards, or a large empty logo panel. Existing hover/focus behavior is retained; no new animation or JavaScript is needed.
 
-## MIT evaluation: proposed, not adopted
+## Approved source-code license
 
-**Assessment:** MIT is a reasonable candidate if the confirmed rights holders want broad, low-friction source-code reuse, including modification, distribution, and commercial/proprietary derivatives. Copies or substantial portions must retain the copyright and permission notices; the text includes warranty/liability disclaimers. It does not require downstream modifications to be published, and it contains no express patent-grant clause. These are reasons to confirm the intended reuse policy before choosing it. See the [official MIT text](https://opensource.org/license/mit).
+The root [LICENSE](../LICENSE) grants MIT rights exclusively to the original source code, copyright 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez. The owner approved these terms and confirmed Ramiro’s explicit approval. This records the supplied authorization rather than an independent authorship investigation.
 
-Repository hosting and listing someone as a contributor do not themselves establish permission to relicense their work. The rights holder for the code and authorization covering each contributor's work must be confirmed. [GitHub's Choose a License guidance](https://choosealicense.com/no-permission/) explains why an absent license is not a general reuse grant.
+The Pipesor name, logo, branding, visual identity, product screenshots and social media artwork remain All Rights Reserved. The scope includes exclusions for `public/branding/`, brand-derived icons, `src/assets/product/` and `public/social-card.png`, wherever the excluded material is used. Bundled font licenses and other third-party terms remain in effect. [Licensing scope](licensing.md) documents the exclusions and equivalent EN/ES notices; package metadata points to the scoped license file instead of implying a blanket asset grant.
 
-Before any adoption, confirm:
+The page retains its existing layout and uses equivalent localized notices. No policy pages or contact addresses are introduced by this licensing decision.
 
-1. Who owns or is authorized to license the repository's original source code.
-2. Jhon Galvez's and Ramiro Guzman's approval, and permission for any other relevant contributions.
-3. The intended code-only scope and the correct copyright notice.
-4. Preservation of third-party license terms and explicit exclusions for supplied non-code assets.
+## Historical footer-only validation
 
-The proposed software license must exclude `public/branding/`, `src/assets/product/`, brand-derived icons, and social artwork unless separately authorized. Bundled font license notices remain unchanged. Any future code license must clearly document those exclusions rather than implying one blanket license for the repository.
-
-**Current state:** no `LICENSE` file or package license declaration was added. The site does not say MIT licensed or present MIT as an active project license. The proposal is documented here only. This document grants no license over the code, brand assets, or product captures.
-
-## Validation scope
+The following records the earlier footer iteration before the approved licensing update. It does not certify the current license notices or current source; use the README verification workflow for later changes. Statements about pending ownership and the absence of a license below describe that earlier state.
 
 - `bun run check`: zero errors, warnings, or hints.
 - `bun run test`: three existing tests and commit-message checks pass.

@@ -8,7 +8,7 @@ The bilingual public-facing landing page for Pipesor, an AIOps thesis project. T
 - Product captures show prototype data; displayed metrics are illustrative. Copy still needs owner review.
 - The early-access form is a local preview: submission is disabled and no data is sent.
 - Production publication requires explicit approval. Deployment configuration does not confirm that a production site is live.
-- No source-code license has been adopted. Ownership and contributor approval remain pending; the MIT proposal excludes brand assets and product screenshots.
+- Source code is licensed under the [MIT License](LICENSE), copyright 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez. The Pipesor name, logo, branding, visual identity, product screenshots and social media artwork are excluded and remain All Rights Reserved. Third-party materials retain their own licenses; see [licensing scope](docs/licensing.md).
 
 ## Requirements and setup
 
@@ -44,6 +44,8 @@ Builds require an explicit public HTTPS `SITE_URL`; development still works with
 
 For deployment configuration changes, also run `bun run wrangler deploy --dry-run` after building. The [Quality workflow](.github/workflows/quality.yml) checks commit and squash-message conventions, diagnostics, tests, the build, and deployment configuration. It does not deploy.
 
+For localized 404 routing and response headers, use `bun run wrangler dev --local --port 8788` against the built output. Astro preview does not reproduce Workers Static Assets routing or `_headers` processing. Unknown root paths should return the English 404; unknown `/es/` paths should return the Spanish 404. Verify real 404 status and working home/product links. Stop the local server when finished.
+
 ## Repository guide
 
 | Location | Purpose |
@@ -58,7 +60,8 @@ Documentation:
 
 - [Landing brief](docs/landing-page-brief.md): product and brand requirements.
 - [Focused refinement](docs/focused-refinement.md): interaction and design decisions; [previous acceptance verification](docs/refinement-verification.md) records earlier checks.
-- [Footer refinement and licensing proposal](docs/footer-refinement.md): footer decisions, pending ownership, and proposed code-only MIT scope.
+- [Footer refinement](docs/footer-refinement.md): footer composition and code-only licensing scope.
+- [Licensing](docs/licensing.md): MIT source-code grant, excluded assets and third-party notices.
 - [Deployment guide](docs/deployment.md): Workers Builds settings, canonical origin, and preview visibility.
 - [Agent guidance](AGENTS.md): boundaries, roles, skills, and verification expectations.
 
