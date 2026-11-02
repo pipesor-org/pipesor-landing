@@ -35,10 +35,12 @@ Before submitting changes:
 ```sh
 bun run check
 bun run test
-bun run build
+SITE_URL=https://pipesor-landing.jhon-galvezchambi.workers.dev bun run build
 ```
 
 These commands run Astro diagnostics, tests including commit-message hook checks, and the static build. After building, use `bun run preview --port 4321` for manual browser verification; it is an interactive server, not an automated check. Follow [AGENTS.md](AGENTS.md) for the required UI verification scope.
+
+Builds require an explicit public HTTPS `SITE_URL`; development still works without it. The approved origin is currently `https://pipesor-landing.jhon-galvezchambi.workers.dev`. Change it only after a new origin is approved and configured. For agent sessions, use `bun run preview --port 4322 --ignore-lock` and retain the foreground command session while using Chrome DevTools. Astro's automatic background preview can terminate when the agent command exits. Choose an unused port; do not replace an existing preview.
 
 For deployment configuration changes, also run `bun run wrangler deploy --dry-run` after building. The [Quality workflow](.github/workflows/quality.yml) checks commit and squash-message conventions, diagnostics, tests, the build, and deployment configuration. It does not deploy.
 
