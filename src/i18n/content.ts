@@ -2,6 +2,7 @@ export const content = {
   en: {
     title: 'Pipesor — Evidence-backed CI/CD diagnosis',
     description: 'Explore Pipesor, an early-stage AIOps prototype for GitHub Actions incidents, evidence-backed diagnosis, and human validation. Demo data only.',
+    socialImageAlt: 'Pipesor — CI/CD incidents, diagnosed with evidence. Early-stage prototype. Demo data.',
     skip: 'Skip to content', home: 'Pipesor home', navLabel: 'Main navigation',
     nav: ['Workflow', 'Product', 'Questions'], language: 'Language', theme: 'Theme', themes: ['System', 'Light', 'Dark'],
     productHeading: 'Evidence you can inspect', productIntro: 'Look inside the prototype. Each view keeps a different part of the investigation in focus.',
@@ -64,6 +65,7 @@ export const content = {
   es: {
     title: 'Pipesor — Diagnóstico CI/CD con evidencias',
     description: 'Explora Pipesor, un prototipo AIOps para incidentes de GitHub Actions, diagnóstico con evidencias y validación humana. Solo datos de demostración.',
+    socialImageAlt: 'Pipesor — Incidentes CI/CD, diagnosticados con evidencias. Prototipo en desarrollo. Datos de demostración.',
     skip: 'Saltar al contenido', home: 'Inicio de Pipesor', navLabel: 'Navegación principal',
     nav: ['Flujo', 'Producto', 'Preguntas'], language: 'Idioma', theme: 'Tema', themes: ['Sistema', 'Claro', 'Oscuro'],
     productHeading: 'Examina las evidencias', productIntro: 'Explora el prototipo. Cada vista mantiene en foco una parte distinta de la investigación.',
