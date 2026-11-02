@@ -1,0 +1,12 @@
+{
+  "binaries": {
+    "chromium": null,
+    "chromium-browser": null,
+    "google-chrome": null,
+    "firefox": null,
+    "webkit2gtk-driver": null,
+    "playwright": null
+  },
+  "physical_device": "No physical device tool or supplied device session available",
+  "scope": "PATH inventory only; no installations attempted"
+}

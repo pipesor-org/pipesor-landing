@@ -1,0 +1,76 @@
+{
+  "base": "http://localhost:8789",
+  "checks": "passed",
+  "results": [
+    {
+      "path": "/stage4-missing",
+      "status": 404,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/nested/missing/page?source=check",
+      "status": 404,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/es/stage4-missing",
+      "status": 404,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/es/nested/missing/page?source=check",
+      "status": 404,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/_headers",
+      "status": 404,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/es/",
+      "status": 200,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "mime": "application/xml"
+    },
+    {
+      "path": "/googlece11464d35f7cf12.html",
+      "status": 307,
+      "mime": null
+    },
+    {
+      "path": "/googlece11464d35f7cf12",
+      "status": 200,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/_astro/Brand.i6DHXzyq.css",
+      "status": 200,
+      "mime": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/_astro/react.CvnImTBr.js",
+      "status": 200,
+      "mime": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "status": 200,
+      "mime": "font/woff2"
+    },
+    {
+      "path": "/_astro/operations.DoFSCPBO_Z2gRWO1.webp",
+      "status": 200,
+      "mime": "image/webp"
+    }
+  ]
+}

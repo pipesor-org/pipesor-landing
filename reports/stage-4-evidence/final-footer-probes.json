@@ -1,0 +1,254 @@
+[
+  {
+    "lang": "en",
+    "width": 390,
+    "theme": "light",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"width\":390,\"theme\":\"light\",\"overflow\":false,\"license\":\"Source code is licensed under MIT. The Pipesor name, logo, branding, visual identity, product screenshots, and social media artwork are excluded; all rights reserved for those assets. Third-party materials retain their own licenses.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "theme": "dark",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"width\":390,\"theme\":\"dark\",\"overflow\":false,\"license\":\"Source code is licensed under MIT. The Pipesor name, logo, branding, visual identity, product screenshots, and social media artwork are excluded; all rights reserved for those assets. Third-party materials retain their own licenses.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "theme": "light",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"width\":768,\"theme\":\"light\",\"overflow\":false,\"license\":\"Source code is licensed under MIT. The Pipesor name, logo, branding, visual identity, product screenshots, and social media artwork are excluded; all rights reserved for those assets. Third-party materials retain their own licenses.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "theme": "dark",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"width\":768,\"theme\":\"dark\",\"overflow\":false,\"license\":\"Source code is licensed under MIT. The Pipesor name, logo, branding, visual identity, product screenshots, and social media artwork are excluded; all rights reserved for those assets. Third-party materials retain their own licenses.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "theme": "light",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"width\":1440,\"theme\":\"light\",\"overflow\":false,\"license\":\"Source code is licensed under MIT. The Pipesor name, logo, branding, visual identity, product screenshots, and social media artwork are excluded; all rights reserved for those assets. Third-party materials retain their own licenses.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "theme": "dark",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"width\":1440,\"theme\":\"dark\",\"overflow\":false,\"license\":\"Source code is licensed under MIT. The Pipesor name, logo, branding, visual identity, product screenshots, and social media artwork are excluded; all rights reserved for those assets. Third-party materials retain their own licenses.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "es",
+    "width": 390,
+    "theme": "light",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"width\":390,\"theme\":\"light\",\"overflow\":false,\"license\":\"El código fuente tiene licencia MIT. El nombre, logotipo, marca, identidad visual, capturas del producto y material gráfico para redes sociales de Pipesor quedan excluidos; todos los derechos reservados sobre esos elementos. Los materiales de terceros conservan sus propias licencias.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi y Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "es",
+    "width": 390,
+    "theme": "dark",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"width\":390,\"theme\":\"dark\",\"overflow\":false,\"license\":\"El código fuente tiene licencia MIT. El nombre, logotipo, marca, identidad visual, capturas del producto y material gráfico para redes sociales de Pipesor quedan excluidos; todos los derechos reservados sobre esos elementos. Los materiales de terceros conservan sus propias licencias.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi y Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":390,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "es",
+    "width": 768,
+    "theme": "light",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"width\":768,\"theme\":\"light\",\"overflow\":false,\"license\":\"El código fuente tiene licencia MIT. El nombre, logotipo, marca, identidad visual, capturas del producto y material gráfico para redes sociales de Pipesor quedan excluidos; todos los derechos reservados sobre esos elementos. Los materiales de terceros conservan sus propias licencias.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi y Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "es",
+    "width": 768,
+    "theme": "dark",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"width\":768,\"theme\":\"dark\",\"overflow\":false,\"license\":\"El código fuente tiene licencia MIT. El nombre, logotipo, marca, identidad visual, capturas del producto y material gráfico para redes sociales de Pipesor quedan excluidos; todos los derechos reservados sobre esos elementos. Los materiales de terceros conservan sus propias licencias.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi y Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":768,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "es",
+    "width": 1440,
+    "theme": "light",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"width\":1440,\"theme\":\"light\",\"overflow\":false,\"license\":\"El código fuente tiene licencia MIT. El nombre, logotipo, marca, identidad visual, capturas del producto y material gráfico para redes sociales de Pipesor quedan excluidos; todos los derechos reservados sobre esos elementos. Los materiales de terceros conservan sus propias licencias.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi y Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: light\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  },
+  {
+    "lang": "es",
+    "width": 1440,
+    "theme": "dark",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"width\":1440,\"theme\":\"dark\",\"overflow\":false,\"license\":\"El código fuente tiene licencia MIT. El nombre, logotipo, marca, identidad visual, capturas del producto y material gráfico para redes sociales de Pipesor quedan excluidos; todos los derechos reservados sobre esos elementos. Los materiales de terceros conservan sus propias licencias.\",\"copyright\":\"© 2026 Jhon Alexander Galvez Chambi y Ramiro Alexander Guzman Chavez.\",\"offscreen\":0}\n```"
+        }
+      ]
+    },
+    "console": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":false,\"hasTouch\":false,\"isLandscape\":false,\"width\":1440,\"height\":900}\nEmulating color scheme: dark\nEmulating prefers-reduced-motion: reduce\n## Console messages\n<no console messages found>"
+        }
+      ]
+    }
+  }
+]

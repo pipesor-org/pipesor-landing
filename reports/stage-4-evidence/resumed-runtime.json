@@ -1,0 +1,98 @@
+[
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"hydrated\":true}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"feedback\":\"The format is valid. Registration is still disabled; nothing has been sent or stored.\",\"disabled\":true,\"submits\":0,\"requests\":0}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "## Console messages\n<no console messages found>"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"theme\":\"dark\",\"savedTheme\":\"dark\",\"viewerEnabled\":true}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"open\":true,\"zoom\":true,\"zoomText\":\"Ajustar imagen\"}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"closed\":true,\"focusReturned\":true}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"hydrated\":true,\"feedback\":\"El formato es válido. El registro sigue desactivado; no se ha enviado ni guardado nada.\",\"disabled\":true,\"method\":\"dialog\",\"action\":null,\"inputName\":null,\"requests\":0}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "## Console messages\n<no console messages found>"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"lang\":\"es\",\"noindex\":\"noindex\",\"productHref\":\"/es/#product\",\"focused\":true,\"outline\":\"solid\"}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"url\":\"http://localhost:8789/es/#product\",\"hasProduct\":true,\"lang\":\"es\"}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"lang\":\"en\",\"homeHref\":\"/\",\"focused\":true,\"outline\":\"solid\"}\n```"
+      }
+    ]
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "Script ran on page and returned:\n```json\n{\"url\":\"http://localhost:8789/\",\"theme\":\"light\",\"stored\":\"light\",\"lang\":\"en\"}\n```"
+      }
+    ]
+  }
+]

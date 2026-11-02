@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/missing",
+    "status": 404,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 2186,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": "en",
+    "noindex": true
+  },
+  {
+    "path": "/es/missing",
+    "status": 404,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 2230,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": "es",
+    "noindex": true
+  },
+  {
+    "path": "/deep/missing",
+    "status": 404,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 2186,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": "en",
+    "noindex": true
+  },
+  {
+    "path": "/es/deep/missing",
+    "status": 404,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 2230,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": "es",
+    "noindex": true
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 36451,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": "en",
+    "noindex": false
+  },
+  {
+    "path": "/es/",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 37277,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": "es",
+    "noindex": false
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "contentType": "application/xml",
+    "bytes": 262,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": null,
+    "noindex": false
+  },
+  {
+    "path": "/googlece11464d35f7cf12.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 53,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": null,
+    "noindex": false
+  },
+  {
+    "path": "/social-card.png",
+    "status": 200,
+    "contentType": "image/png",
+    "bytes": 48198,
+    "nosniff": "nosniff",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "language": null,
+    "noindex": false
+  }
+]
