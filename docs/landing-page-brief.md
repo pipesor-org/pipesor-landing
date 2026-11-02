@@ -246,7 +246,7 @@ Minimal and functional: 120ms `ease` for hover/focus/state; one subtle entrance 
 ## 11. Open decisions (owner must confirm)
 
 1. Primary CTA and its destination — early-access form, waitlist, demo request, or contact email?
-Owner response: The primary CTA will be "Get Early Access", directing users to an early-access registration form within the landing page.
+Owner response: While registration is closed, the primary CTA is "Preview early access" / "Vista previa del acceso anticipado", directing users to the early-access form preview within the landing page. The compact header labels are "Preview" / "Vista previa", with the full CTA as the accessible name. This replaces the previously approved "Get Early Access" wording for the current preview.
 The form should be designed and validated as part of the landing experience, but submissions must remain disabled until the data handling process, privacy requirements, and submission destination are approved.
 Do not integrate external form services or invent backend functionality.
 
