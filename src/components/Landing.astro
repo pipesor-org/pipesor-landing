@@ -21,6 +21,7 @@ import insightsEn from '../assets/product/insights-en.webp';
 import insightsEs from '../assets/product/insights-es.webp';
 const { locale = 'en' } = Astro.props as { locale: Locale };
 const c = content[locale];
+const canonicalUrl = new URL(locale === 'en' ? '/' : '/es/', Astro.site).href;
 const views = [
   { id: 'incidents', image: operations, alt: c.operationsAlt, caption: c.operationsCaption, label: 'english' },
   { id: 'review', image: validation, alt: c.validationAlt, caption: c.validationCaption, label: 'english' },
@@ -36,10 +37,10 @@ const localizedLabel = `${c.screenshotLabel}${locale === 'es' ? ` · ${c.english
     {[sora400, sora500, sora600].map(href => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
     <meta name="description" content={c.description} />
     <meta name="theme-color" content="#f7f8fa" />
-    <meta property="og:title" content={c.title} /><meta property="og:description" content={c.description} /><meta property="og:type" content="website" /><meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} /><meta property="og:image" content={new URL('/social-card.png', Astro.site).href} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Pipesor — CI/CD incidents, diagnosed with evidence. Early-stage prototype. Demo data." />
+    <meta property="og:title" content={c.title} /><meta property="og:description" content={c.description} /><meta property="og:type" content="website" /><meta property="og:url" content={canonicalUrl} /><meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} /><meta property="og:image" content={new URL('/social-card.png', Astro.site).href} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={c.socialImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="alternate" hreflang="en" href={new URL('/', Astro.site).href} /><link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site).href} /><link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
-    <link rel="canonical" href={new URL(locale === 'en' ? '/' : '/es/', Astro.site).href} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/branding/pipesor_symbol_primary_light_v1.0.svg" media="(prefers-color-scheme: light)" /><link rel="icon" type="image/svg+xml" href="/branding/pipesor_symbol_primary_dark_v1.0.svg" media="(prefers-color-scheme: dark)" /><link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" /><link rel="apple-touch-icon" sizes="180x180" href="/icon-180.png" />
     <title>{c.title}</title>
     <script is:inline>
