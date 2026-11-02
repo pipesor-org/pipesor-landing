@@ -1,0 +1,290 @@
+[
+  {
+    "locale": "en",
+    "theme": "light",
+    "normalMotion": {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "reveals": [
+        {
+          "id": "workflow",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "product",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "uncertainty section",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "memory section frame",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "questions",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "early-access",
+          "revealed": false,
+          "opacity": "1"
+        }
+      ],
+      "theme": "light"
+    },
+    "radio": {
+      "checked": "history",
+      "focused": "view-history"
+    },
+    "disclosure": false,
+    "keyboardOpen": false,
+    "keyboardClose": {
+      "closed": true,
+      "opener": true
+    },
+    "dialogBounds": {
+      "rect": {
+        "x": 7.833333492279053,
+        "y": 28,
+        "width": 289,
+        "height": 536,
+        "top": 28,
+        "right": 296.83333349227905,
+        "bottom": 564,
+        "left": 7.833333492279053
+      },
+      "width": 320,
+      "height": 568
+    },
+    "offline": {
+      "open": true,
+      "loaded": true,
+      "alt": true,
+      "caption": true,
+      "closed": true
+    }
+  },
+  {
+    "locale": "en",
+    "theme": "dark",
+    "normalMotion": {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "reveals": [
+        {
+          "id": "workflow",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "product",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "uncertainty section",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "memory section frame",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "questions",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "early-access",
+          "revealed": false,
+          "opacity": "1"
+        }
+      ],
+      "theme": "dark"
+    },
+    "radio": {
+      "checked": "history",
+      "focused": "view-history"
+    },
+    "disclosure": false,
+    "keyboardOpen": false,
+    "keyboardClose": {
+      "closed": true,
+      "opener": true
+    },
+    "dialogBounds": {
+      "rect": {
+        "x": 7.833333492279053,
+        "y": 28,
+        "width": 289,
+        "height": 536,
+        "top": 28,
+        "right": 296.83333349227905,
+        "bottom": 564,
+        "left": 7.833333492279053
+      },
+      "width": 320,
+      "height": 568
+    },
+    "offline": {
+      "open": true,
+      "loaded": true,
+      "alt": true,
+      "caption": true,
+      "closed": true
+    }
+  },
+  {
+    "locale": "es",
+    "theme": "light",
+    "normalMotion": {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "reveals": [
+        {
+          "id": "workflow",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "product",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "uncertainty section",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "memory section frame",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "questions",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "early-access",
+          "revealed": false,
+          "opacity": "1"
+        }
+      ],
+      "theme": "light"
+    },
+    "radio": {
+      "checked": "history",
+      "focused": "view-history"
+    },
+    "disclosure": false,
+    "keyboardOpen": false,
+    "keyboardClose": {
+      "closed": true,
+      "opener": true
+    },
+    "dialogBounds": {
+      "rect": {
+        "x": 7.833333492279053,
+        "y": 28,
+        "width": 289,
+        "height": 536,
+        "top": 28,
+        "right": 296.83333349227905,
+        "bottom": 564,
+        "left": 7.833333492279053
+      },
+      "width": 320,
+      "height": 568
+    },
+    "offline": {
+      "open": true,
+      "loaded": true,
+      "alt": true,
+      "caption": true,
+      "closed": true
+    }
+  },
+  {
+    "locale": "es",
+    "theme": "dark",
+    "normalMotion": {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "reveals": [
+        {
+          "id": "workflow",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "product",
+          "revealed": true,
+          "opacity": "1"
+        },
+        {
+          "id": "uncertainty section",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "memory section frame",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "questions",
+          "revealed": false,
+          "opacity": "1"
+        },
+        {
+          "id": "early-access",
+          "revealed": false,
+          "opacity": "1"
+        }
+      ],
+      "theme": "dark"
+    },
+    "radio": {
+      "checked": "history",
+      "focused": "view-history"
+    },
+    "disclosure": false,
+    "keyboardOpen": false,
+    "keyboardClose": {
+      "closed": true,
+      "opener": true
+    },
+    "dialogBounds": {
+      "rect": {
+        "x": 7.833333492279053,
+        "y": 28,
+        "width": 289,
+        "height": 536,
+        "top": 28,
+        "right": 296.83333349227905,
+        "bottom": 564,
+        "left": 7.833333492279053
+      },
+      "width": 320,
+      "height": 568
+    },
+    "offline": {
+      "open": true,
+      "loaded": true,
+      "alt": true,
+      "caption": true,
+      "closed": true
+    }
+  }
+]

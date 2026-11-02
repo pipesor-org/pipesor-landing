@@ -1,0 +1,143 @@
+{
+  "results": [
+    {
+      "locale": "en",
+      "theme": "light",
+      "deniedStorage": {
+        "theme": "light",
+        "working": true
+      },
+      "noJS": {
+        "lang": "en",
+        "h1": "CI/CD diagnosis.Evidence first.",
+        "formDisabled": true,
+        "viewerDisabled": true,
+        "notice": "Enable JavaScript to check the email format. Submission remains disabled.",
+        "details": 8
+      },
+      "blockedViewer": {
+        "open": true,
+        "loaded": false,
+        "alt": "Pipesor Operations with active incidents, including a missing deployment secret and a diagnosis marked inconclusive. All rows are demo data.",
+        "caption": "Active incidents bring the workflow, probable cause, confidence, and operational status into one view. Product screenshot · Demo data",
+        "closeEnabled": true,
+        "closed": true
+      },
+      "slowViewer": {
+        "open": true,
+        "closeEnabled": true,
+        "closed": true
+      }
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "deniedStorage": {
+        "theme": "dark",
+        "working": true
+      },
+      "noJS": {
+        "lang": "en",
+        "h1": "CI/CD diagnosis.Evidence first.",
+        "formDisabled": true,
+        "viewerDisabled": true,
+        "notice": "Enable JavaScript to check the email format. Submission remains disabled.",
+        "details": 8
+      },
+      "blockedViewer": {
+        "open": true,
+        "loaded": false,
+        "alt": "Pipesor Operations with active incidents, including a missing deployment secret and a diagnosis marked inconclusive. All rows are demo data.",
+        "caption": "Active incidents bring the workflow, probable cause, confidence, and operational status into one view. Product screenshot · Demo data",
+        "closeEnabled": true,
+        "closed": true
+      },
+      "slowViewer": {
+        "open": true,
+        "closeEnabled": true,
+        "closed": true
+      }
+    },
+    {
+      "locale": "es",
+      "theme": "light",
+      "deniedStorage": {
+        "theme": "light",
+        "working": true
+      },
+      "noJS": {
+        "lang": "es",
+        "h1": "Diagnóstico CI/CDCon evidencias.",
+        "formDisabled": true,
+        "viewerDisabled": true,
+        "notice": "Activa JavaScript para comprobar el formato. Los envíos siguen desactivados.",
+        "details": 8
+      },
+      "blockedViewer": {
+        "open": true,
+        "loaded": false,
+        "alt": "Operations de Pipesor con incidentes activos: un secreto de despliegue ausente y un diagnóstico no concluyente. Todas las filas son datos de demostración.",
+        "caption": "Los incidentes activos reúnen el workflow, la causa probable, la confianza y el estado operativo en una vista. Captura del producto · Datos de demostración · Interfaz en inglés",
+        "closeEnabled": true,
+        "closed": true
+      },
+      "slowViewer": {
+        "open": true,
+        "closeEnabled": true,
+        "closed": true
+      }
+    },
+    {
+      "locale": "es",
+      "theme": "dark",
+      "deniedStorage": {
+        "theme": "dark",
+        "working": true
+      },
+      "noJS": {
+        "lang": "es",
+        "h1": "Diagnóstico CI/CDCon evidencias.",
+        "formDisabled": true,
+        "viewerDisabled": true,
+        "notice": "Activa JavaScript para comprobar el formato. Los envíos siguen desactivados.",
+        "details": 8
+      },
+      "blockedViewer": {
+        "open": true,
+        "loaded": false,
+        "alt": "Operations de Pipesor con incidentes activos: un secreto de despliegue ausente y un diagnóstico no concluyente. Todas las filas son datos de demostración.",
+        "caption": "Los incidentes activos reúnen el workflow, la causa probable, la confianza y el estado operativo en una vista. Captura del producto · Datos de demostración · Interfaz en inglés",
+        "closeEnabled": true,
+        "closed": true
+      },
+      "slowViewer": {
+        "open": true,
+        "closeEnabled": true,
+        "closed": true
+      }
+    }
+  ],
+  "errors": [],
+  "expectedNetworkFailures": [
+    {
+      "type": "Image",
+      "error": "",
+      "blockedReason": "inspector"
+    },
+    {
+      "type": "Image",
+      "error": "",
+      "blockedReason": "inspector"
+    },
+    {
+      "type": "Image",
+      "error": "",
+      "blockedReason": "inspector"
+    },
+    {
+      "type": "Image",
+      "error": "",
+      "blockedReason": "inspector"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Script ran on page and returned:
+```json
+{"locale":"en","canonical":"https://pipesor-landing.jhon-galvezchambi.workers.dev/","ogUrl":"https://pipesor-landing.jhon-galvezchambi.workers.dev/","ogTitle":"Pipesor — Evidence-backed CI/CD diagnosis","ogDescription":"Explore Pipesor, an early-stage AIOps prototype for GitHub Actions incidents, evidence-backed diagnosis, and human validation. Demo data only.","ogAlt":"Pipesor — CI/CD incidents, diagnosed with evidence. Early-stage prototype. Demo data.","sitemapLink":"https://pipesor-landing.jhon-galvezchambi.workers.dev/sitemap.xml","sitemap":{"status":200,"mime":"text/xml","parseError":false,"urls":["https://pipesor-landing.jhon-galvezchambi.workers.dev/","https://pipesor-landing.jhon-galvezchambi.workers.dev/es/"]},"origin":"http://localhost:4322","width":1036,"overflow":false}
+```

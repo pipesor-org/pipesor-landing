@@ -1,0 +1,4 @@
+Script ran on page and returned:
+```json
+{"locale":"es","canonical":"https://pipesor-landing.jhon-galvezchambi.workers.dev/es/","ogUrl":"https://pipesor-landing.jhon-galvezchambi.workers.dev/es/","ogTitle":"Pipesor — Diagnóstico CI/CD con evidencias","ogDescription":"Explora Pipesor, un prototipo AIOps para incidentes de GitHub Actions, diagnóstico con evidencias y validación humana. Solo datos de demostración.","ogAlt":"Pipesor — Incidentes CI/CD, diagnosticados con evidencias. Prototipo en desarrollo. Datos de demostración.","sitemapLink":"https://pipesor-landing.jhon-galvezchambi.workers.dev/sitemap.xml","sitemap":{"status":200,"mime":"text/xml","parseError":false,"urls":["https://pipesor-landing.jhon-galvezchambi.workers.dev/","https://pipesor-landing.jhon-galvezchambi.workers.dev/es/"]},"origin":"http://localhost:4322","width":1036,"overflow":false}
+```

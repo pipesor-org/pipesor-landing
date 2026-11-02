@@ -1,0 +1,52 @@
+$ astro build
+23:22:27 [types] Generated 43ms
+23:22:27 [build] output: "static"
+23:22:27 [build] mode: "static"
+23:22:27 [build] directory: /tmp/pipesor-stage1-clean.W5YOYD/dist/
+23:22:27 [build] Collecting build info...
+23:22:27 [build] ✓ Completed in 72ms.
+23:22:27 [build] Building static entrypoints...
+23:22:28 [vite] ✓ built in 259ms
+23:22:28 [vite] ✓ built in 115ms
+23:22:28 [build] Rearranging server assets...
+
+ generating static routes 
+23:22:28   ├─ /es/index.html (+30ms) 
+23:22:28   ├─ /index.html (+6ms) 
+23:22:28 ✓ Completed in 63ms.
+
+ generating optimized images 
+23:22:28 [vite] ✓ built in 19ms
+23:22:28   ▶ /_astro/operations.DoFSCPBO_ZlcmBr.webp (before: 93kB, after: 7kB) (+91ms) (1/28)
+23:22:28   ▶ /_astro/validation.De35VVo8_ZIFWgN.webp (before: 104kB, after: 7kB) (+91ms) (2/28)
+23:22:28   ▶ /_astro/history-es.HuhmnpC9_Z1dS5hR.webp (before: 121kB, after: 8kB) (+91ms) (3/28)
+23:22:28   ▶ /_astro/insights-es.BCzl8ztH_Z1G51J1.webp (before: 101kB, after: 7kB) (+91ms) (4/28)
+23:22:28   ▶ /_astro/uncertainty.zjFy1M2e_Z23QG8a.webp (before: 42kB, after: 3kB) (+131ms) (5/28)
+23:22:28   ▶ /_astro/history-en.ChBea6hD_25iSQO.webp (before: 113kB, after: 8kB) (+131ms) (6/28)
+23:22:28   ▶ /_astro/insights-en.BkSxOy0S_Z27TqPl.webp (before: 88kB, after: 6kB) (+131ms) (7/28)
+23:22:28   ▶ /_astro/operations.DoFSCPBO_Z2gRWO1.webp (before: 93kB, after: 16kB) (+41ms) (8/28)
+23:22:28   ▶ /_astro/validation.De35VVo8_ZWaIAj.webp (before: 104kB, after: 18kB) (+41ms) (9/28)
+23:22:28   ▶ /_astro/uncertainty.zjFy1M2e_1i3LEL.webp (before: 42kB, after: 7kB) (+49ms) (10/28)
+23:22:28   ▶ /_astro/history-es.HuhmnpC9_tH0I6.webp (before: 121kB, after: 19kB) (+90ms) (11/28)
+23:22:28   ▶ /_astro/insights-es.BCzl8ztH_Z2vg2yB.webp (before: 101kB, after: 18kB) (+90ms) (12/28)
+23:22:28   ▶ /_astro/history-en.ChBea6hD_Z1hi8V9.webp (before: 113kB, after: 18kB) (+50ms) (13/28)
+23:22:28   ▶ /_astro/uncertainty.zjFy1M2e_Z1a4Sk0.webp (before: 42kB, after: 13kB) (+75ms) (14/28)
+23:22:28   ▶ /_astro/insights-en.BkSxOy0S_286G90.webp (before: 88kB, after: 15kB) (+125ms) (15/28)
+23:22:28   ▶ /_astro/operations.DoFSCPBO_2rVOK1.webp (before: 93kB, after: 31kB) (+125ms) (16/28)
+23:22:28   ▶ /_astro/validation.De35VVo8_1tohkH.webp (before: 104kB, after: 34kB) (+125ms) (17/28)
+23:22:28   ▶ /_astro/history-es.HuhmnpC9_17WwAS.webp (before: 121kB, after: 37kB) (+127ms) (18/28)
+23:22:28   ▶ /_astro/history-en.ChBea6hD_2b4d9x.webp (before: 113kB, after: 34kB) (+127ms) (19/28)
+23:22:28   ▶ /_astro/uncertainty.zjFy1M2e_XWwAG.webp (before: 42kB, after: 22kB) (+52ms) (20/28)
+23:22:28   ▶ /_astro/insights-es.BCzl8ztH_5Mdcj.webp (before: 101kB, after: 32kB) (+127ms) (21/28)
+23:22:28   ▶ /_astro/insights-en.BkSxOy0S_1HKSqW.webp (before: 88kB, after: 29kB) (+173ms) (22/28)
+23:22:28   ▶ /_astro/operations.DoFSCPBO_Z2rjmoP.webp (before: 93kB, after: 63kB) (+173ms) (23/28)
+23:22:28   ▶ /_astro/validation.De35VVo8_Z1tqjXi.webp (before: 104kB, after: 69kB) (+173ms) (24/28)
+23:22:28   ▶ /_astro/history-es.HuhmnpC9_1G5jsp.webp (before: 121kB, after: 81kB) (+151ms) (25/28)
+23:22:28   ▶ /_astro/history-en.ChBea6hD_Z2l08MR.webp (before: 113kB, after: 76kB) (+205ms) (26/28)
+23:22:28   ▶ /_astro/insights-en.BkSxOy0S_ZTCe6U.webp (before: 88kB, after: 61kB) (+170ms) (27/28)
+23:22:28   ▶ /_astro/insights-es.BCzl8ztH_Z2wATly.webp (before: 101kB, after: 69kB) (+294ms) (28/28)
+23:22:28 ✓ Completed in 604ms.
+
+23:22:28 [build] ✓ Completed in 1.08s.
+23:22:28 [build] 2 page(s) built in 1.15s
+23:22:28 [build] Complete!

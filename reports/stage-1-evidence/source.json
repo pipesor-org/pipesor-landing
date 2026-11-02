@@ -1,0 +1,11 @@
+{
+  "base_revision": "5f3360f84f7a32db536f6be75c49932d855555d4",
+  "branch": "fix/stage-1-readiness",
+  "committed": false,
+  "files_sha256": {
+    "astro.config.mjs": "703d2337c428b6b2760d3a6abd1d535a4a1bbdf7a226a503d81c197cf56ee52f",
+    "tests/site-origin.test.ts": "83c9c8ec8aecbfdfedf416d5aaf15912b560dabadd845f411e74474494664d28",
+    "src/styles/global.css": "6b65b8442d79799013b4e04a66c45e310cf9b3d16ca289be18ffa4138b918fe5",
+    ".github/workflows/quality.yml": "eeff49b92ea5f3401d731302047289dfa707d368595ab7f3739f4c2d5716c072"
+  }
+}

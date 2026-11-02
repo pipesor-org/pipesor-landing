@@ -1,0 +1,4 @@
+Script ran on page and returned:
+```json
+{"events":[{"name":"keydown","duration":160,"interactionId":6372,"start":44337.60000002384},{"name":"keypress","duration":160,"interactionId":6372,"start":44337.60000002384},{"name":"click","duration":160,"interactionId":6372,"start":44337.60000002384},{"name":"keyup","duration":72,"interactionId":6372,"start":44424.19999998808},{"name":"keydown","duration":112,"interactionId":6379,"start":45265.39999997616},{"name":"keyup","duration":224,"interactionId":6379,"start":45337}],"open":false,"focused":true}
+```

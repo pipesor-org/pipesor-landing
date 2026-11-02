@@ -1,0 +1,30 @@
+[
+  {
+    "locale": "en",
+    "theme": "light",
+    "before": false,
+    "after": true,
+    "disabled": true
+  },
+  {
+    "locale": "en",
+    "theme": "dark",
+    "before": false,
+    "after": true,
+    "disabled": true
+  },
+  {
+    "locale": "es",
+    "theme": "light",
+    "before": false,
+    "after": true,
+    "disabled": true
+  },
+  {
+    "locale": "es",
+    "theme": "dark",
+    "before": false,
+    "after": true,
+    "disabled": true
+  }
+]

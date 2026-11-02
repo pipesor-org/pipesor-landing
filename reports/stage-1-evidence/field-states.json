@@ -1,0 +1,62 @@
+[
+  {
+    "locale": "en",
+    "theme": "light",
+    "empty": {
+      "border": "rgb(102, 112, 133)",
+      "fill": "rgb(247, 248, 250)",
+      "surface": "rgb(255, 255, 255)"
+    },
+    "focus": {
+      "border": "rgb(102, 112, 133)",
+      "outline": "rgb(49, 87, 213)",
+      "outlineWidth": "2px",
+      "focusVisible": true
+    }
+  },
+  {
+    "locale": "en",
+    "theme": "dark",
+    "empty": {
+      "border": "rgb(152, 162, 179)",
+      "fill": "rgb(14, 17, 22)",
+      "surface": "rgb(21, 26, 33)"
+    },
+    "focus": {
+      "border": "rgb(152, 162, 179)",
+      "outline": "rgb(108, 140, 255)",
+      "outlineWidth": "2px",
+      "focusVisible": true
+    }
+  },
+  {
+    "locale": "es",
+    "theme": "light",
+    "empty": {
+      "border": "rgb(102, 112, 133)",
+      "fill": "rgb(247, 248, 250)",
+      "surface": "rgb(255, 255, 255)"
+    },
+    "focus": {
+      "border": "rgb(102, 112, 133)",
+      "outline": "rgb(49, 87, 213)",
+      "outlineWidth": "2px",
+      "focusVisible": true
+    }
+  },
+  {
+    "locale": "es",
+    "theme": "dark",
+    "empty": {
+      "border": "rgb(152, 162, 179)",
+      "fill": "rgb(14, 17, 22)",
+      "surface": "rgb(21, 26, 33)"
+    },
+    "focus": {
+      "border": "rgb(152, 162, 179)",
+      "outline": "rgb(108, 140, 255)",
+      "outlineWidth": "2px",
+      "focusVisible": true
+    }
+  }
+]

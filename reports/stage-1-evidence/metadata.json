@@ -1,0 +1,56 @@
+[
+  {
+    "locale": "en",
+    "links": [
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "es",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/es/"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "x-default",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/"
+      },
+      {
+        "rel": "canonical",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/"
+      }
+    ],
+    "social": [
+      "https://pipesor-landing.jhon-galvezchambi.workers.dev/social-card.png"
+    ]
+  },
+  {
+    "locale": "es",
+    "links": [
+      {
+        "rel": "alternate",
+        "hreflang": "en",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "es",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/es/"
+      },
+      {
+        "rel": "alternate",
+        "hreflang": "x-default",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/"
+      },
+      {
+        "rel": "canonical",
+        "href": "https://pipesor-landing.jhon-galvezchambi.workers.dev/es/"
+      }
+    ],
+    "social": [
+      "https://pipesor-landing.jhon-galvezchambi.workers.dev/social-card.png"
+    ]
+  }
+]

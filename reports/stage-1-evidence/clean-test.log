@@ -1,0 +1,97 @@
+$ bun test && sh tests/commit-msg.sh
+bun test v1.4.4 (38afee6c8)
+
+tests/site-origin.test.ts:
+(pass) release metadata rejects unsafe origin: undefined [304.70ms]
+(pass) release metadata rejects unsafe origin:  [291.02ms]
+(pass) release metadata rejects unsafe origin: not-a-url [283.64ms]
+(pass) release metadata rejects unsafe origin: http://pipesor.com [277.17ms]
+(pass) release metadata rejects unsafe origin: https://localhost [287.62ms]
+(pass) release metadata rejects unsafe origin: https://app.localhost [279.79ms]
+(pass) release metadata rejects unsafe origin: https://127.0.0.1 [283.83ms]
+(pass) release metadata rejects unsafe origin: https://192.168.1.39 [307.06ms]
+(pass) release metadata rejects unsafe origin: https://[::1] [284.24ms]
+(pass) release metadata rejects unsafe origin: https://app.local [283.52ms]
+(pass) release metadata rejects unsafe origin: https://app.internal [278.00ms]
+(pass) release metadata rejects unsafe origin: https://pipesor.com/path [284.22ms]
+(pass) release metadata rejects unsafe origin: https://pipesor.com?preview=1 [278.35ms]
+(pass) release metadata rejects unsafe origin: https://pipesor.com#preview [283.61ms]
+(pass) release metadata rejects unsafe origin: https://user:pass@pipesor.com [327.80ms]
+(pass) release metadata accepts approved origin: https://pipesor-landing.jhon-galvezchambi.workers.dev [294.81ms]
+(pass) release metadata accepts approved origin: https://pipesor-landing.jhon-galvezchambi.workers.dev/ [287.53ms]
+(pass) dev does not require a release origin [295.49ms]
+(pass) sync does not require a release origin [284.38ms]
+(pass) preview does not require a release origin [284.52ms]
+
+tests/diagnosis.test.ts:
+(pass) early access and localization > en: renders a safe preview without a submission destination [5.42ms]
+(pass) early access and localization > es: renders a safe preview without a submission destination [0.65ms]
+(pass) early access and localization > translations have matching content shape and concise promises [0.20ms]
+
+ 23 pass
+ 0 fail
+Ran 23 tests across 2 files. [5.84s]
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mcommit-msg[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+┃  commitlint ❯ 
+$ bun ./node_modules/@commitlint/cli/cli.js --edit /tmp/tmp.FZgTaLKoDV
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.19 seconds)
+✓ commitlint (0.19 seconds)
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mcommit-msg[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+┃  commitlint ❯ 
+$ bun ./node_modules/@commitlint/cli/cli.js --edit /tmp/tmp.FZgTaLKoDV
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.18 seconds)
+✓ commitlint (0.18 seconds)
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mcommit-msg[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+┃  commitlint ❯ 
+$ bun ./node_modules/@commitlint/cli/cli.js --edit /tmp/tmp.FZgTaLKoDV
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.18 seconds)
+✓ commitlint (0.18 seconds)
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mcommit-msg[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+┃  commitlint ❯ 
+$ bun ./node_modules/@commitlint/cli/cli.js --edit /tmp/tmp.FZgTaLKoDV
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.18 seconds)
+✓ commitlint (0.18 seconds)
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mcommit-msg[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+┃  commitlint ❯ 
+$ bun ./node_modules/@commitlint/cli/cli.js --edit /tmp/tmp.FZgTaLKoDV
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.18 seconds)
+✓ commitlint (0.18 seconds)
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mcommit-msg[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+┃  commitlint ❯ 
+$ bun ./node_modules/@commitlint/cli/cli.js --edit /tmp/tmp.FZgTaLKoDV
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.18 seconds)
+✓ commitlint (0.18 seconds)
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mcommit-msg[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+┃  commitlint ❯ 
+$ bun ./node_modules/@commitlint/cli/cli.js --edit /tmp/tmp.FZgTaLKoDV
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.20 seconds)
+✓ commitlint (0.20 seconds)
+Commit-message checks passed.

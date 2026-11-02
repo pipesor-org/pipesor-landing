@@ -1,0 +1,8 @@
+$ astro check
+23:22:16 [types] Generated 264ms
+23:22:16 [check] Getting diagnostics for Astro files in /tmp/pipesor-stage1-clean.W5YOYD...
+Result (13 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+

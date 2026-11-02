@@ -1,0 +1,1326 @@
+{
+  "results": [
+    {
+      "locale": "en",
+      "theme": "light",
+      "system": {
+        "effective": "light",
+        "preference": "system"
+      },
+      "persistence": {
+        "theme": "light",
+        "stored": "light",
+        "checked": "light"
+      },
+      "controls": {
+        "anchor": {
+          "hash": "#early-access",
+          "top": 111.47917175292969,
+          "headerBottom": 80
+        },
+        "disclosures": [
+          {
+            "group": ".workflow-stage",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "group": ".faq details",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          }
+        ],
+        "panels": [
+          {
+            "selected": "incidents",
+            "visible": true
+          },
+          {
+            "selected": "review",
+            "visible": true
+          },
+          {
+            "selected": "history",
+            "visible": true
+          }
+        ],
+        "history": {
+          "checked": true,
+          "focused": "top"
+        },
+        "hydrated": true,
+        "submitDisabled": true
+      },
+      "validation": [
+        {
+          "value": "",
+          "invalid": "true",
+          "feedback": "Enter your work email.",
+          "border": "rgb(23, 25, 28)",
+          "fill": "rgb(247, 248, 250)",
+          "surface": "rgb(255, 255, 255)",
+          "contrastOutside": 17.613725296648717,
+          "contrastInside": 16.575536724257823
+        },
+        {
+          "value": "invalid",
+          "invalid": "true",
+          "feedback": "Enter a valid email address, such as you@example.com.",
+          "border": "rgb(23, 25, 28)",
+          "fill": "rgb(247, 248, 250)",
+          "surface": "rgb(255, 255, 255)",
+          "contrastOutside": 17.613725296648717,
+          "contrastInside": 16.575536724257823
+        },
+        {
+          "value": "stage1@example.invalid",
+          "invalid": null,
+          "feedback": "The format is valid. Registration is still disabled; nothing has been sent or stored.",
+          "border": "rgb(102, 112, 133)",
+          "fill": "rgb(247, 248, 250)",
+          "surface": "rgb(255, 255, 255)",
+          "contrastOutside": 4.974752735406439,
+          "contrastInside": 4.681530753492598
+        }
+      ],
+      "viewer": {
+        "initial": {
+          "open": true,
+          "loaded": true,
+          "alt": "Pipesor Operations with active incidents, including a missing deployment secret and a diagnosis marked inconclusive. All rows are demo data.",
+          "bounds": {
+            "x": 15.833333969116211,
+            "y": 16,
+            "width": 1393,
+            "height": 868
+          },
+          "focused": "Close image×"
+        },
+        "zoom": true,
+        "fit": true
+      },
+      "closed": {
+        "open": false,
+        "returnedToOpener": true,
+        "scrollRestored": true
+      },
+      "language": {
+        "lang": "es",
+        "hash": "#early-access"
+      }
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "system": {
+        "effective": "dark",
+        "preference": "system"
+      },
+      "persistence": {
+        "theme": "dark",
+        "stored": "dark",
+        "checked": "dark"
+      },
+      "controls": {
+        "anchor": {
+          "hash": "#early-access",
+          "top": 112.14583587646484,
+          "headerBottom": 80
+        },
+        "disclosures": [
+          {
+            "group": ".workflow-stage",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "group": ".faq details",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          }
+        ],
+        "panels": [
+          {
+            "selected": "incidents",
+            "visible": true
+          },
+          {
+            "selected": "review",
+            "visible": true
+          },
+          {
+            "selected": "history",
+            "visible": true
+          }
+        ],
+        "history": {
+          "checked": true,
+          "focused": "top"
+        },
+        "hydrated": true,
+        "submitDisabled": true
+      },
+      "validation": [
+        {
+          "value": "",
+          "invalid": "true",
+          "feedback": "Enter your work email.",
+          "border": "rgb(244, 246, 248)",
+          "fill": "rgb(14, 17, 22)",
+          "surface": "rgb(21, 26, 33)",
+          "contrastOutside": 16.132083442757622,
+          "contrastInside": 17.456533757349536
+        },
+        {
+          "value": "invalid",
+          "invalid": "true",
+          "feedback": "Enter a valid email address, such as you@example.com.",
+          "border": "rgb(244, 246, 248)",
+          "fill": "rgb(14, 17, 22)",
+          "surface": "rgb(21, 26, 33)",
+          "contrastOutside": 16.132083442757622,
+          "contrastInside": 17.456533757349536
+        },
+        {
+          "value": "stage1@example.invalid",
+          "invalid": null,
+          "feedback": "The format is valid. Registration is still disabled; nothing has been sent or stored.",
+          "border": "rgb(152, 162, 179)",
+          "fill": "rgb(14, 17, 22)",
+          "surface": "rgb(21, 26, 33)",
+          "contrastOutside": 6.786047356810358,
+          "contrastInside": 7.343184479765057
+        }
+      ],
+      "viewer": {
+        "initial": {
+          "open": true,
+          "loaded": true,
+          "alt": "Pipesor Operations with active incidents, including a missing deployment secret and a diagnosis marked inconclusive. All rows are demo data.",
+          "bounds": {
+            "x": 15.833333969116211,
+            "y": 16,
+            "width": 1393,
+            "height": 868
+          },
+          "focused": "Close image×"
+        },
+        "zoom": true,
+        "fit": true
+      },
+      "closed": {
+        "open": false,
+        "returnedToOpener": true,
+        "scrollRestored": true
+      },
+      "language": {
+        "lang": "es",
+        "hash": "#early-access"
+      }
+    },
+    {
+      "locale": "es",
+      "theme": "light",
+      "system": {
+        "effective": "light",
+        "preference": "system"
+      },
+      "persistence": {
+        "theme": "light",
+        "stored": "light",
+        "checked": "light"
+      },
+      "controls": {
+        "anchor": {
+          "hash": "#early-access",
+          "top": 111.73958587646484,
+          "headerBottom": 80
+        },
+        "disclosures": [
+          {
+            "group": ".workflow-stage",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "group": ".faq details",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          }
+        ],
+        "panels": [
+          {
+            "selected": "incidents",
+            "visible": true
+          },
+          {
+            "selected": "review",
+            "visible": true
+          },
+          {
+            "selected": "history",
+            "visible": true
+          }
+        ],
+        "history": {
+          "checked": true,
+          "focused": "top"
+        },
+        "hydrated": true,
+        "submitDisabled": true
+      },
+      "validation": [
+        {
+          "value": "",
+          "invalid": "true",
+          "feedback": "Introduce tu correo de trabajo.",
+          "border": "rgb(23, 25, 28)",
+          "fill": "rgb(247, 248, 250)",
+          "surface": "rgb(255, 255, 255)",
+          "contrastOutside": 17.613725296648717,
+          "contrastInside": 16.575536724257823
+        },
+        {
+          "value": "invalid",
+          "invalid": "true",
+          "feedback": "Introduce un correo válido, como tu@ejemplo.com.",
+          "border": "rgb(23, 25, 28)",
+          "fill": "rgb(247, 248, 250)",
+          "surface": "rgb(255, 255, 255)",
+          "contrastOutside": 17.613725296648717,
+          "contrastInside": 16.575536724257823
+        },
+        {
+          "value": "stage1@example.invalid",
+          "invalid": null,
+          "feedback": "El formato es válido. El registro sigue desactivado; no se ha enviado ni guardado nada.",
+          "border": "rgb(102, 112, 133)",
+          "fill": "rgb(247, 248, 250)",
+          "surface": "rgb(255, 255, 255)",
+          "contrastOutside": 4.974752735406439,
+          "contrastInside": 4.681530753492598
+        }
+      ],
+      "viewer": {
+        "initial": {
+          "open": true,
+          "loaded": true,
+          "alt": "Operations de Pipesor con incidentes activos: un secreto de despliegue ausente y un diagnóstico no concluyente. Todas las filas son datos de demostración.",
+          "bounds": {
+            "x": 15.833333969116211,
+            "y": 16,
+            "width": 1393,
+            "height": 868
+          },
+          "focused": "Cerrar imagen×"
+        },
+        "zoom": true,
+        "fit": true
+      },
+      "closed": {
+        "open": false,
+        "returnedToOpener": true,
+        "scrollRestored": true
+      },
+      "language": {
+        "lang": "en",
+        "hash": "#early-access"
+      }
+    },
+    {
+      "locale": "es",
+      "theme": "dark",
+      "system": {
+        "effective": "dark",
+        "preference": "system"
+      },
+      "persistence": {
+        "theme": "dark",
+        "stored": "dark",
+        "checked": "dark"
+      },
+      "controls": {
+        "anchor": {
+          "hash": "#early-access",
+          "top": 111.73958587646484,
+          "headerBottom": 80
+        },
+        "disclosures": [
+          {
+            "group": ".workflow-stage",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "group": ".faq details",
+            "open": [
+              false,
+              true,
+              false,
+              false
+            ]
+          }
+        ],
+        "panels": [
+          {
+            "selected": "incidents",
+            "visible": true
+          },
+          {
+            "selected": "review",
+            "visible": true
+          },
+          {
+            "selected": "history",
+            "visible": true
+          }
+        ],
+        "history": {
+          "checked": true,
+          "focused": "top"
+        },
+        "hydrated": true,
+        "submitDisabled": true
+      },
+      "validation": [
+        {
+          "value": "",
+          "invalid": "true",
+          "feedback": "Introduce tu correo de trabajo.",
+          "border": "rgb(244, 246, 248)",
+          "fill": "rgb(14, 17, 22)",
+          "surface": "rgb(21, 26, 33)",
+          "contrastOutside": 16.132083442757622,
+          "contrastInside": 17.456533757349536
+        },
+        {
+          "value": "invalid",
+          "invalid": "true",
+          "feedback": "Introduce un correo válido, como tu@ejemplo.com.",
+          "border": "rgb(244, 246, 248)",
+          "fill": "rgb(14, 17, 22)",
+          "surface": "rgb(21, 26, 33)",
+          "contrastOutside": 16.132083442757622,
+          "contrastInside": 17.456533757349536
+        },
+        {
+          "value": "stage1@example.invalid",
+          "invalid": null,
+          "feedback": "El formato es válido. El registro sigue desactivado; no se ha enviado ni guardado nada.",
+          "border": "rgb(152, 162, 179)",
+          "fill": "rgb(14, 17, 22)",
+          "surface": "rgb(21, 26, 33)",
+          "contrastOutside": 6.786047356810358,
+          "contrastInside": 7.343184479765057
+        }
+      ],
+      "viewer": {
+        "initial": {
+          "open": true,
+          "loaded": true,
+          "alt": "Operations de Pipesor con incidentes activos: un secreto de despliegue ausente y un diagnóstico no concluyente. Todas las filas son datos de demostración.",
+          "bounds": {
+            "x": 15.833333969116211,
+            "y": 16,
+            "width": 1393,
+            "height": 868
+          },
+          "focused": "Cerrar imagen×"
+        },
+        "zoom": true,
+        "fit": true
+      },
+      "closed": {
+        "open": false,
+        "returnedToOpener": true,
+        "scrollRestored": true
+      },
+      "language": {
+        "lang": "en",
+        "hash": "#early-access"
+      }
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "url": "http://localhost:4322/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-en.BkSxOy0S_286G90.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-en.ChBea6hD_Z1hi8V9.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/es/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-es.BCzl8ztH_Z2vg2yB.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-en.ChBea6hD_Z1hi8V9.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-en.BkSxOy0S_286G90.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-en.ChBea6hD_Z1hi8V9.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-en.BkSxOy0S_286G90.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/es/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-es.BCzl8ztH_Z2vg2yB.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/es/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-es.BCzl8ztH_Z2vg2yB.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/es/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-es.BCzl8ztH_Z2vg2yB.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-es.HuhmnpC9_tH0I6.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-en.ChBea6hD_Z1hi8V9.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-en.BkSxOy0S_286G90.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/es/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-es.HuhmnpC9_tH0I6.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-es.BCzl8ztH_Z2vg2yB.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/es/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-es.HuhmnpC9_tH0I6.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-es.BCzl8ztH_Z2vg2yB.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/",
+      "method": "GET",
+      "type": "Document"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-400-normal.CRt88UEn.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-500-normal.01eiPEn0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/sora-latin-600-normal.Cdg4DaK0.woff2",
+      "method": "GET",
+      "type": "Font"
+    },
+    {
+      "url": "http://localhost:4322/_astro/Landing.CM1QpvvI.css",
+      "method": "GET",
+      "type": "Stylesheet"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_light_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_lockup_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/operations.DoFSCPBO_2rVOK1.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/history-en.ChBea6hD_Z1hi8V9.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/insights-en.BkSxOy0S_286G90.webp",
+      "method": "GET",
+      "type": "Image"
+    },
+    {
+      "url": "http://localhost:4322/_astro/EarlyAccess.DGqxsLmm.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/_astro/client.Cd-EeyjT.js",
+      "method": "GET",
+      "type": "Script"
+    },
+    {
+      "url": "http://localhost:4322/branding/pipesor_symbol_primary_dark_v1.0.svg",
+      "method": "GET",
+      "type": "Other"
+    },
+    {
+      "url": "http://localhost:4322/_astro/react.CvnImTBr.js",
+      "method": "GET",
+      "type": "Script"
+    }
+  ],
+  "unexpectedRequests": []
+}
