@@ -17,6 +17,7 @@ jobs:
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
       CLOUDFLARE_SEND_METRICS: 'false'
+      SITE_URL: 'https://pipesor-landing.jhon-galvezchambi.workers.dev'
     steps:
       - uses: actions/checkout@v7
         with:

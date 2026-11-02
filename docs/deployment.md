@@ -1,6 +1,8 @@
 # Cloudflare Workers deployment
 
-This guide describes the landing page's static deployment setup. It does not confirm that Workers Builds is connected or that production publication has been approved. Run commands from the repository root after completing the [README setup](../README.md#requirements-and-setup).
+This guide describes the landing page's static deployment setup and intended build configuration. Publication requires explicit approval. Run commands from the repository root after completing the [README setup](../README.md#requirements-and-setup).
+
+Configure `SITE_URL` in Workers Builds before releasing the build validation below. A missing origin intentionally stops the build.
 
 ## Workers Builds configuration
 
@@ -12,21 +14,23 @@ After publication is approved, connect `pipesor-org/pipesor-landing` to Workers 
 | Production branch | `main` (automatic deployments enabled) |
 | Preview builds | Enabled for non-production branches |
 | Build variable | `SKIP_DEPENDENCY_INSTALL=1` |
-| Build variable | `SITE_URL=https://<approved-production-host>` |
+| Build variable | `SITE_URL=https://pipesor-landing.jhon-galvezchambi.workers.dev` |
 | Build command | `bun install --frozen-lockfile && bun run build` |
 | Deploy command | `bun run wrangler deploy` |
 | Preview command | `bun run wrangler preview` |
 
 Enabling automatic production deployments allows changes merged into `main` to publish. Obtain publication approval before enabling that setting; the Quality workflow itself does not deploy.
 
-Use the assigned `workers.dev` hostname until a custom domain is available. Set `SITE_URL` for production and preview builds to the approved production origin for canonical links. Local builds default to `http://localhost:4321`; rebuild after changing the origin.
+The currently approved public origin is `https://pipesor-landing.jhon-galvezchambi.workers.dev`. Use it for production and preview builds so canonical, hreflang and social-image URLs identify the public site rather than a preview. `pipesor.com` is a future migration, not the current origin.
+
+Every static build requires an explicit `SITE_URL`. Missing, malformed, non-HTTPS, local/IP, or non-origin values (credentials, path, query or fragment) stop the build. Local development, checks and preview startup can omit it; development then uses `http://localhost:4321`. Preview serves the already-built metadata, so rebuild after changing the origin. See the [README verification commands](../README.md#verification) for local use.
 
 ## Validation and visibility
 
 Validate deployment configuration without deploying:
 
 ```sh
-bun run build
+SITE_URL=https://pipesor-landing.jhon-galvezchambi.workers.dev bun run build
 bun run wrangler deploy --dry-run
 ```
 
