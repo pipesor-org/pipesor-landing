@@ -1,5 +1,7 @@
 # Stage 2 — laboratory performance and delivery evidence
 
+Historical baseline: the [post-release follow-up](STAGE_2_PERFORMANCE_FOLLOWUP.md) did not reproduce these slower results and records the current three-run sample and profile differences. Keep this evidence for comparison; neither sample establishes a code speedup or field CWV compliance.
+
 Measured 2026-11-02 against the merged production build at `https://pipesor-landing.jhon-galvezchambi.workers.dev/`, based on `791c98db9b534ea91a6259c1190e51737c9f051d`. Current public EN/ES canonicals, language alternates and social-image URLs were confirmed on the approved HTTPS origin before measurement. No production configuration or measurement service was changed.
 
 ## Method and limits

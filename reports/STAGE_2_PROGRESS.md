@@ -1,6 +1,12 @@
 # Stage 2 — implementation and remaining evidence
 
-Date: 2026-11-02. Branch: `fix/social-metadata`, based on merged main `791c98db9b534ea91a6259c1190e51737c9f051d`. No commits, pushes, deployments, remote policy changes, trackers or form activation occurred. Reports remain local-only and are not referenced from publishable source or documentation.
+Initial measurement date: 2026-11-02, based on merged main `791c98db9b534ea91a6259c1190e51737c9f051d`. The initial preparation below made no commits, pushes or deployments. The subsequently authorized source changes were committed on `feature/seo-discovery` and merged by the owner in PR #6 as `bef79b026740c0d35c6ed47df50c89dec4c5adf2`. GitHub Quality and the production Workers build passed. Reports are maintained separately on `feature/landing-reports`; the owner authorized pushing this temporary reports branch after the social and Search Console setup checks. Reports are excluded from source PRs and `main`.
+
+## Post-release follow-up
+
+Fresh quality and repository agents resumed the two tasks that previously hit usage limits. Their findings are recorded in [performance follow-up](STAGE_2_PERFORMANCE_FOLLOWUP.md) and [search follow-up](STAGE_2_SEARCH_FOLLOWUP.md). Initially, neither Search Console access nor a field-performance report was available. The owner subsequently completed Search Console verification; reports are processing, and no indexed inspection results or field report have been supplied. Current public EN/ES declarations, social image and the two-URL sitemap were verified after release. No additional source or remote configuration changes were made during this follow-up.
+
+Cloudflare's read-only deployment list identified deployment `3f659fe0-5c1a-412b-9fe9-9e02be39e39a`, created `2026-11-02T07:16:22.599975Z`, serving version `02bc3e04-52be-406f-80d9-b5f13c4c324c` at 100%. The successful Workers build check is attached to merged commit `bef79b0`. These release observations do not establish Google indexing or field CWV results.
 
 ## Coordination
 
@@ -19,16 +25,16 @@ The owner asked to evaluate both optional additions and continue. The sitemap wa
 
 | Item | Result | Remaining limit / dependency |
 | --- | --- | --- |
-| LAND-008 | Three mobile and three desktop cold-load observations, resource costs and short interaction samples recorded | LCP target missed; calibrated critical-path profiling and an evidence-backed improvement remain open. Full trace export unavailable. |
+| LAND-008 | Original baseline and new three-run public mobile/desktop follow-up, resource costs and short interaction samples recorded | Fresh median LCP 2032ms mobile / 258ms desktop; earlier ~3.2s result was not reproduced. These are environment-specific lab observations, not a measured code improvement or field pass. See follow-up for profile differences and limits. |
 | LAND-009 | Field-data access evaluated | PSI quota error; no authorized CrUX API key/data. Origin availability, window and p75 metrics remain unknown. |
-| LAND-012 | Minimal sitemap implemented and verified locally | Publish only after approval; submit through Search Console when property access exists. |
-| LAND-013 | Localized social metadata and canonical-aligned `og:url` implemented | Real share-debugger/crawler validation unavailable; public verification after release. |
-| LAND-014 | Correct public EN/ES declarations confirmed after the merged release | Search Console/URL Inspection unavailable; Google-selected canonicals and index state unknown. |
+| LAND-012 | Minimal sitemap merged and verified publicly: XML 200, exactly two canonical locale URLs | Owner now has a verified GSC property; sitemap submission has not been confirmed. |
+| LAND-013 | Complete: public metadata checks plus owner-confirmed EN/ES social previews | English X/WhatsApp screenshots retained; Spanish previews confirmed by owner without screenshots. Shared bitmap remains English; localized page metadata is equivalent. WhatsApp compact layout accepted, no code change requested. |
+| LAND-014 | GSC ownership verified by owner after PR #7; public declarations verified | GSC is processing initial reports; both indexed URL Inspection results and Google-selected canonicals remain pending. |
 | LAND-027 | Current revalidation policy retained after repeat-visit check | No evidence-backed immutable-header change or savings claim. |
-| LAND-031 | Existing audience/problem vocabulary mapped to official EN/ES GitHub guidance | No query-demand, keyword-volume, SERP or representative-user evidence; audience/locale priorities remain provisional. |
+| LAND-031 | Four-query EN/ES public result sample mapped to existing content; official troubleshooting and vendor-tool intents recorded | No query-demand, keyword-volume or representative-user evidence; audience/locale priorities remain provisional. |
 | LAND-032 | JSON-LD evaluated; defer recommended | Reconsider only for a supported use with verified facts; no ranking/rich-result promise. |
 
-See [performance evidence](STAGE_2_PERFORMANCE.md) and [search evidence](STAGE_2_SEARCH.md). These results do not establish full Stage 2 completion, search readiness, field CWV compliance or conversion effectiveness.
+See the original [performance evidence](STAGE_2_PERFORMANCE.md) and [search evidence](STAGE_2_SEARCH.md), with the post-release follow-ups linked above. These results do not establish full Stage 2 completion, search readiness, field CWV compliance or conversion effectiveness.
 
 ## Integration validation
 
@@ -40,6 +46,14 @@ See [performance evidence](STAGE_2_PERFORMANCE.md) and [search evidence](STAGE_2
 - Built-preview keyboard viewer open/Escape close worked, with no console errors observed. No visible layout/style changes were introduced; the previous full screenshot matrix was not repeated for metadata-only changes.
 - Anonymous request with a Twitterbot user-agent reached the current public social image: 200, `image/png`, 48198 bytes; local dimensions remain 1200×630. This is a spoofed-client HTTP check, not an actual social crawler/share-debugger result.
 
+## Owner validation and current handoff
+
+The owner supplied [X](twitter.jpeg) and [WhatsApp](whatsapp.png) screenshots of the English root URL, then confirmed that Spanish links show the corresponding Spanish information. These are actual platform-preview observations, distinct from the earlier spoofed-user-agent HTTP check. The owner accepted WhatsApp’s compact presentation; no large-preview workaround is required. The shared social-card bitmap remains English by the existing implementation scope.
+
+PR #7 merged as `2818691804840805d214218fd88ae4b60fac3b4b`; GitHub Quality and the production Workers build passed for that merge. The owner reports successful Search Console setup and initial data processing. This proves neither indexing nor Google-selected canonicals. Submit `sitemap.xml` if not already submitted, then record indexed URL Inspection fields for `/` and `/es/` when available; do not infer submission from ownership verification.
+
+**Three of eight Stage 2 items remain pending or partial: LAND-009, LAND-014 and LAND-031.** No additional source fix is justified by current evidence. LAND-008 has current lab measurements with explicit limits; LAND-012 is implemented and published; LAND-013 is validated; LAND-027 retains caching after evaluation; LAND-032 records a justified JSON-LD deferral. Field data, indexing outcomes and audience fit remain unknown.
+
 ## Next decisions
 
-Review the four publishable files and the local evidence separately. Search Console read-only access is needed to resolve indexing/canonical questions; authorized CrUX/PSI data or an owner-provided report is needed for field results. Keep LCP improvement open rather than promoting the laboratory baseline to a pass. Publication and any later commits/push/PR still require authorization. LAND-007 remains deferred, and registration/tracking remain disabled.
+The four source files were merged and published separately from the local evidence. Search Console inspection results are needed to resolve indexing/canonical questions; authorized CrUX/PSI data or an owner-provided report is needed for field results. No source performance fix is justified by the fresh lab results; retain the old observations and profile differences rather than claiming a code speedup or field pass. Future commits/pushes/publication require authorization. LAND-007 remains deferred, and registration/tracking remain disabled.

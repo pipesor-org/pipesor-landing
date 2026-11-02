@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Script ran on page and returned:\n```json\n{\"url\":\"http://localhost:4322/\",\"width\":1440,\"dpr\":1.0000000298023224,\"overflow\":false,\"canonical\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/\",\"ogUrl\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/\"}\n```"
+    }
+  ]
+}

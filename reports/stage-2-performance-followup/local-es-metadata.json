@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Script ran on page and returned:\n```json\n{\"url\":\"http://localhost:4322/es/\",\"lang\":\"es\",\"title\":\"Pipesor — Diagnóstico CI/CD con evidencias\",\"width\":390,\"dpr\":3,\"head\":{\"canonical\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/es/\",\"ogUrl\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/es/\",\"ogImage\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/social-card.png\",\"ogAlt\":\"Pipesor — Incidentes CI/CD, diagnosticados con evidencias. Prototipo en desarrollo. Datos de demostración.\",\"sitemap\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/sitemap.xml\",\"alternates\":[{\"lang\":\"en\",\"url\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/\"},{\"lang\":\"es\",\"url\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/es/\"},{\"lang\":\"x-default\",\"url\":\"https://pipesor-landing.jhon-galvezchambi.workers.dev/\"}]},\"overflow\":false,\"hero\":{\"complete\":true,\"buttonDisabled\":false},\"motion\":false}\n```"
+    }
+  ]
+}
