@@ -12,7 +12,8 @@
     "check": "astro check",
     "setup:hooks": "lefthook install",
     "commitlint": "bun ./node_modules/@commitlint/cli/cli.js",
-    "test": "bun test && sh tests/commit-msg.sh"
+    "test": "bun test",
+    "test:hooks": "sh tests/commit-msg.sh"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.2",

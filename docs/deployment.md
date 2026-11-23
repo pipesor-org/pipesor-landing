@@ -19,7 +19,7 @@ After publication is approved, connect `pipesor-org/pipesor-landing` to Workers 
 | Deploy command | `bun run wrangler deploy` |
 | Preview command | `bun run wrangler preview` |
 
-Enabling automatic production deployments allows changes merged into `main` to publish. Obtain publication approval before enabling that setting; the Quality workflow itself does not deploy.
+Enabling automatic production deployments allows changes merged into `main` to publish. Obtain publication approval before enabling that setting; the CI workflow itself does not deploy.
 
 The currently approved public origin is `https://pipesor-landing.jhon-galvezchambi.workers.dev`. Use it for production and preview builds so canonical, hreflang and social-image URLs identify the public site rather than a preview. `pipesor.com` is a future migration, not the current origin.
 
