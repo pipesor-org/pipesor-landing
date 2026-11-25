@@ -5,8 +5,8 @@ The bilingual public-facing landing page for Pipesor, an AIOps thesis project. T
 ## Current state
 
 - English is served at `/`; Spanish at `/es/`.
-- Product captures show prototype data; displayed metrics are illustrative. Copy still needs owner review.
-- The early-access form is a local preview: submission is disabled and no data is sent.
+- The primary action signs in to the Pipesor dashboard with GitHub; the landing itself collects no data.
+- Product captures come from the deployed dashboard with the public `Chaomeum/pipesor-demo` repository. Product claims mirror the dashboard's About pages; see the [Ink on paper redesign](docs/ink-on-paper-redesign.md).
 - Production publication requires explicit approval. Deployment configuration does not confirm that a production site is live.
 - Source code is licensed under the [MIT License](LICENSE), copyright 2026 Jhon Alexander Galvez Chambi and Ramiro Alexander Guzman Chavez. The Pipesor name, logo, branding, visual identity, product screenshots and social media artwork are excluded and remain All Rights Reserved. Third-party materials retain their own licenses; see [licensing scope](docs/licensing.md).
 
@@ -50,16 +50,17 @@ For localized 404 routing and response headers, use `bun run wrangler dev --loca
 
 | Location | Purpose |
 | --- | --- |
-| `src/components/` | Shared layout, screenshot viewer, branding, and local form preview |
-| `src/i18n/content.ts` | English and Spanish copy |
-| `src/styles/global.css` | Brand tokens and responsive styles |
+| `src/components/` | Page layout, evidence replay, screenshot viewer and branding |
+| `src/i18n/content.ts` | English and Spanish copy, outbound links and the replayed run |
+| `src/styles/` | Ink on paper tokens, fonts and responsive styles |
 | `src/assets/product/`, `public/branding/` | Product captures and approved logos |
-| `public/licenses/` | Bundled font licenses |
+| `src/fonts/`, `public/licenses/` | Geist fonts and their license |
 
 Documentation:
 
 - [Landing brief](docs/landing-page-brief.md): product and brand requirements.
-- [Focused refinement](docs/focused-refinement.md): interaction and design decisions; [previous acceptance verification](docs/refinement-verification.md) records earlier checks.
+- [Ink on paper redesign](docs/ink-on-paper-redesign.md): current direction, claim sources, assets and verification.
+- [Focused refinement](docs/focused-refinement.md): earlier interaction and design decisions; [previous acceptance verification](docs/refinement-verification.md) records earlier checks.
 - [Footer refinement](docs/footer-refinement.md): footer composition and code-only licensing scope.
 - [Licensing](docs/licensing.md): MIT source-code grant, excluded assets and third-party notices.
 - [Deployment guide](docs/deployment.md): Workers Builds settings, canonical origin, and preview visibility.

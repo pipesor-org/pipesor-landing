@@ -1,42 +1,38 @@
 ---
-import '@fontsource/sora/latin-400.css';
-import '@fontsource/sora/latin-500.css';
-import '@fontsource/sora/latin-600.css';
-import '@fontsource/jetbrains-mono/latin-400.css';
+import type { ImageMetadata } from 'astro';
+import '../styles/fonts.css';
 import '../styles/global.css';
-import sora400 from '@fontsource/sora/files/sora-latin-400-normal.woff2?url';
-import sora500 from '@fontsource/sora/files/sora-latin-500-normal.woff2?url';
-import sora600 from '@fontsource/sora/files/sora-latin-600-normal.woff2?url';
-import EarlyAccess from './EarlyAccess';
+import geistLatin from '../fonts/geist-latin.woff2?url';
 import Brand from './Brand.astro';
+import GitHubMark from './GitHubMark.astro';
+import EvidenceReplay from './EvidenceReplay';
 import ImageLightbox from './ImageLightbox.astro';
-import ProductImage from './ProductImage.astro';
-import { content, type Locale } from '../i18n/content';
-import operations from '../assets/product/operations.webp';
-import validation from '../assets/product/validation.webp';
-import uncertainty from '../assets/product/uncertainty.webp';
-import historyEn from '../assets/product/history-en.webp';
-import historyEs from '../assets/product/history-es.webp';
-import insightsEn from '../assets/product/insights-en.webp';
-import insightsEs from '../assets/product/insights-es.webp';
+import ProductShot from './ProductShot.astro';
+import { content, links, type Locale } from '../i18n/content';
+
 const { locale = 'en' } = Astro.props as { locale: Locale };
 const c = content[locale];
 const canonicalUrl = new URL(locale === 'en' ? '/' : '/es/', Astro.site).href;
-const views = [
-  { id: 'incidents', image: operations, alt: c.operationsAlt, caption: c.operationsCaption, label: 'english' },
-  { id: 'review', image: validation, alt: c.validationAlt, caption: c.validationCaption, label: 'english' },
-  { id: 'history', image: locale === 'es' ? historyEs : historyEn, alt: c.historyAlt, caption: c.historyCaption, label: 'local' },
-];
-const localizedLabel = `${c.screenshotLabel}${locale === 'es' ? ` · ${c.englishImage}` : ''}`;
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/product/*.webp', { eager: true });
+const shot = (name: string) => ({
+  light: files[`../assets/product/${name}-${locale}-light.webp`].default,
+  dark: files[`../assets/product/${name}-${locale}-dark.webp`].default,
+});
+const views = ['workspace', 'evidence', 'resolution', 'corrected'].map((name, index) => ({ id: name, ...shot(name), ...c.showcase.views[index], caption: c.showcase.captions[index] }));
+const history = shot('history');
+const evidence = shot('evidence');
+const sections = ['#diagnosis', '#protection', '#results', '#questions'];
+const external = { target: '_blank', rel: 'noopener' } as const;
+const redact = (text: string) => text.split('[redacted]');
 ---
 <!doctype html>
 <html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {[sora400, sora500, sora600].map(href => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
+    <link rel="preload" as="font" type="font/woff2" href={geistLatin} crossorigin="anonymous" />
     <meta name="description" content={c.description} />
-    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="theme-color" content="#fafafa" />
     <meta property="og:title" content={c.title} /><meta property="og:description" content={c.description} /><meta property="og:type" content="website" /><meta property="og:url" content={canonicalUrl} /><meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} /><meta property="og:image" content={new URL('/social-card.png', Astro.site).href} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={c.socialImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="alternate" hreflang="en" href={new URL('/', Astro.site).href} /><link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site).href} /><link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
@@ -46,10 +42,16 @@ const localizedLabel = `${c.screenshotLabel}${locale === 'es' ? ` · ${c.english
     <title>{c.title}</title>
     <script is:inline>
       (() => {
+        const root = document.documentElement;
         let preference = 'system';
         try { const saved = localStorage.getItem('pipesor.theme'); if (['system', 'light', 'dark'].includes(saved)) preference = saved; } catch {}
-        document.documentElement.dataset.theme = preference === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
-        document.documentElement.dataset.preference = preference;
+        root.dataset.theme = preference === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : preference;
+        root.dataset.preference = preference;
+        if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          root.classList.add('motion-ok', 'replay-pending');
+          // Never leave content hidden if the scripts fail to run.
+          setTimeout(() => { if (!root.dataset.motionReady) root.classList.remove('motion-ok'); root.classList.remove('replay-pending'); }, 3500);
+        }
       })();
     </script>
   </head>
@@ -58,117 +60,225 @@ const localizedLabel = `${c.screenshotLabel}${locale === 'es' ? ` · ${c.english
     <header class="site-header">
       <div class="header-inner frame">
         <a class="brand" href={locale === 'en' ? '/' : '/es/'} aria-label={c.home}><Brand /></a>
-        <nav class="main-nav" aria-label={c.navLabel}>{c.nav.map((label, index) => <a href={['#workflow', '#product', '#questions'][index]}>{label}</a>)}</nav>
+        <nav class="main-nav" aria-label={c.navLabel}>{c.nav.map((label, index) => <a href={sections[index]} data-spy>{label}</a>)}</nav>
         <div class="preferences">
           <div class="language-control" role="group" aria-label={c.language}>
-            {(['en', 'es'] as const).map(language => <a href={language === 'en' ? '/' : '/es/'} lang={language} hreflang={language} aria-label={language === 'en' ? 'English' : 'Español'} aria-current={language === locale ? 'page' : undefined} data-language={language !== locale ? '' : undefined}>{language.toUpperCase()}</a>)}
+            {(['en', 'es'] as const).map(language => <a href={language === 'en' ? '/' : '/es/'} lang={language} hreflang={language} aria-current={language === locale ? 'page' : undefined} data-language={language !== locale ? '' : undefined}>{language.toUpperCase()}<span class="visually-hidden"> {language === 'en' ? 'English' : 'Español'}</span></a>)}
           </div>
           <fieldset class="theme-control">
             <legend class="visually-hidden">{c.theme}</legend>
             {['system', 'light', 'dark'].map((theme, index) => <label title={c.themes[index]}><input type="radio" name="theme" value={theme} checked={theme === 'system'} /><span class="theme-option"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">{theme === 'system' ? <><rect x="3" y="4" width="16" height="11" rx="1.5" /><path d="M8 19h6m-3-4v4" /></> : theme === 'light' ? <><circle cx="11" cy="11" r="3.5" /><path d="M11 1v2m0 16v2M1 11h2m16 0h2M4 4l1.5 1.5m11 11L18 18M4 18l1.5-1.5m11-11L18 4" /></> : <path d="M18.8 13A8 8 0 0 1 9 3.2 8 8 0 1 0 18.8 13Z" />}</svg><span class="visually-hidden">{c.themes[index]}</span></span></label>)}
           </fieldset>
         </div>
-        <a class="button header-cta" href="#early-access" aria-label={c.cta}>{c.headerCta}</a>
+        <a class="button header-cta" href={links.signIn} aria-label={`${c.signIn} (${c.opensDashboard})`}><GitHubMark size={18} /><span class="header-cta-label">{c.headerSignIn}</span></a>
       </div>
+      <div class="scroll-progress" aria-hidden="true"><span></span></div>
     </header>
+
     <main id="main">
-      <section class="hero frame" aria-labelledby="hero-title">
-        <div class="hero-top">
-          <h1 id="hero-title">{c.headline.map(line => <span class="headline-line"><span>{line}</span></span>)}</h1>
-          <div class="hero-intro"><p class="hero-subhead">{c.subhead}</p><div class="hero-conversion"><div class="hero-actions"><a class="button" href="#early-access">{c.cta}<span aria-hidden="true">↓</span></a><a class="text-link" href="#workflow">{c.secondary}</a></div><p class="prototype">{c.prototype}</p><p class="small">{c.availability}</p></div></div>
-        </div>
-        <div class="hero-stage"><ProductImage image={operations} alt={c.operationsAlt} label={localizedLabel} caption={c.operationsCaption} open={c.openImage} eager sizes="(max-width: 700px) 980px, (max-width: 1200px) calc(100vw - 96px), 1168px" /></div>
-      </section>
-      <section id="workflow" class="workflow section frame" aria-labelledby="workflow-title" data-reveal>
-        <div class="workflow-lead"><h2 id="workflow-title">{c.workflowHeading}</h2><p>{c.workflowIntro}</p><p class="scope-note">{c.prototypeScope}</p></div>
-        <div class="investigation" role="group" aria-label={c.workflowConcept}>
-          {c.steps.map(([title, text], index) => <details class="workflow-stage" name="investigation" open={index === 2}>
-            <summary><h3>{title}</h3><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 8 5 5 5-5" /></svg></summary>
-            <div class="stage-content"><p>{text}</p>
-              {index === 0 && <ul class="evidence-inputs">{c.workflowEvidence.map(item => <li>{item}</li>)}</ul>}
-              {index === 2 && <div class="diagnosis-branches">{c.workflowBranches.map(([name, description]) => <div><h4>{name}</h4><p>{description}</p></div>)}</div>}
-              {index === 3 && <p class="stage-note">{c.validationDetail}</p>}
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="frame hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title">{c.headline.map(line => <span class="headline-line"><span>{line}</span></span>)}</h1>
+            <p class="hero-subhead">{c.subhead}</p>
+            <div class="hero-actions">
+              <a class="button button-large" href={links.signIn}><span class="button-label"><GitHubMark />{c.signIn}</span><svg class="button-arrow" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 11h14m-5-5 5 5-5 5" /></svg></a>
+              <a class="text-link" href="#incident">{c.secondary}</a>
             </div>
-          </details>)}
+            <p class="hero-note">{c.heroNote}</p>
+          </div>
+          <div class="hero-block">
+            <EvidenceReplay locale={locale} client:load />
+          </div>
         </div>
       </section>
-      <section id="product" class="product section frame" aria-labelledby="product-title" data-reveal>
-        <div class="section-heading"><h2 id="product-title">{c.productHeading}</h2><p>{c.productIntro}</p></div>
-        <fieldset class="product-browser">
-          <legend class="visually-hidden">{c.productLegend}</legend>
-          {views.map((view, index) => <><input class="view-radio visually-hidden" type="radio" name="product-view" id={`view-${view.id}`} value={view.id} checked={view.id === 'review'} /><label class="view-choice" for={`view-${view.id}`} id={`label-${view.id}`}><span class="view-name">{c.productViews[index]}<span aria-hidden="true">›</span></span><span class="view-description">{c.productViewDescriptions[index]}</span></label></>)}
-          <div class="browser-panels">{views.map(view => <div class={`browser-panel panel-${view.id}`} role="group" aria-labelledby={`label-${view.id}`}><ProductImage image={view.image} alt={view.alt} label={view.label === 'english' ? localizedLabel : c.screenshotLabel} caption={view.caption} open={c.openImage} sizes="(max-width: 900px) calc(100vw - 96px), 800px" /></div>)}</div>
-        </fieldset>
+
+      <section id="diagnosis" class="showcase section" aria-labelledby="diagnosis-title" data-reveal>
+        <div class="frame showcase-grid">
+          <div class="showcase-intro">
+            <h2 id="diagnosis-title">{c.showcase.heading}</h2>
+            <fieldset class="showcase-tabs">
+              <legend class="visually-hidden">{c.showcase.legend}</legend>
+              {views.map((view, index) => <label><input type="radio" name="showcase-view" value={view.id} id={`view-${view.id}`} checked={index === 0} /><span>{view.tab}</span></label>)}
+              <span class="tab-indicator" aria-hidden="true"></span>
+            </fieldset>
+          </div>
+          <div class="showcase-side">
+            <div class="showcase-texts" aria-live="polite">
+              {views.map(view => <div class={`showcase-text text-${view.id}`}><h3>{view.title}</h3><p>{redact(view.text).map((part, index) => index === 0 ? part : <><span class="redacted">[redacted]</span>{part}</>)}</p></div>)}
+            </div>
+            <div class="action-cells">
+              <a class="button button-large" href={links.signIn}><span class="button-label"><GitHubMark />{c.signIn}</span><svg class="button-arrow" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 11h14m-5-5 5 5-5 5" /></svg></a>
+              <a class="button button-tone button-large" href={links.ai} {...external}>{c.showcase.transparency}<span class="visually-hidden"> ({c.newTab})</span><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 15 15 7m-6 0h6v6" /></svg></a>
+            </div>
+          </div>
+          <div class="showcase-stage" data-shutter>
+            {views.map(view => <div class={`showcase-panel panel-${view.id}`}><ProductShot light={view.light} dark={view.dark} alt={view.caption} caption={view.caption} open={c.openImage} sizes="(max-width: 1280px) calc(100vw - 96px), 1150px" /></div>)}
+          </div>
+        </div>
       </section>
-      <section class="uncertainty section" aria-labelledby="uncertainty-title" data-reveal>
-        <div class="frame uncertainty-inner"><div class="section-heading"><h2 id="uncertainty-title">{c.uncertaintyHeading}</h2><p>{c.uncertaintyText}</p></div><ProductImage image={uncertainty} alt={c.uncertaintyAlt} label={localizedLabel} caption={c.uncertaintyDetail} open={c.openImage} sizes="(max-width: 700px) 1400px, (max-width: 1200px) calc(100vw - 64px), 1200px" /></div>
+
+      <section id="protection" class="protection section" aria-labelledby="protection-title" data-reveal>
+        <div class="frame protection-inner">
+          <div class="protection-lead">
+            <h2 id="protection-title">{c.protection.heading}</h2>
+            <p>{c.protection.intro}</p>
+            <ProductShot class="evidence-shot" light={evidence.light} dark={evidence.dark} alt={c.protection.evidenceCaption} caption={c.protection.evidenceCaption} open={c.openImage} sizes="(max-width: 900px) calc(100vw - 48px), 560px" />
+          </div>
+          <ul class="protection-list">
+            {c.protection.items.map(([claim, detail]) => <li><span class="bar-bullet" aria-hidden="true" /><p class="protection-claim">{claim}</p><p class="protection-detail">{redact(detail).map((part, index) => index === 0 ? part : <><span class="redacted">[redacted]</span>{part}</>)}</p></li>)}
+          </ul>
+          <a class="text-link on-ink" href={links.security} {...external}>{c.protection.security}<span class="visually-hidden"> ({c.newTab})</span></a>
+        </div>
       </section>
-      <section class="memory section frame" aria-labelledby="memory-title" data-reveal>
-        <div class="memory-copy"><h2 id="memory-title">{c.memoryHeading}</h2><p>{c.memoryText}</p><a class="text-link" href="#product" data-history-link>{c.productViews[2]}</a></div>
-        <ProductImage image={locale === 'es' ? insightsEs : insightsEn} alt={c.insightsAlt} label={c.screenshotLabel} caption={c.insightsCaption} open={c.openImage} sizes="(max-width: 900px) calc(100vw - 96px), 700px" />
+
+      <section id="incident" class="incident section" aria-labelledby="incident-title" data-reveal>
+        <div class="frame">
+          <h2 id="incident-title" class="display-heading">{c.timeline.heading}</h2>
+          <ol class="time-bar" aria-label={c.timeline.label} data-ui>
+            {c.timeline.segments.map(([duration, clause], index) => <li class={`time-segment segment-${index}`} style={`--grow: ${index === 0 ? 30 : 178}`}><span class="time-fill"><span class="time-duration">{duration}</span></span><p class="time-clause">{clause}</p></li>)}
+          </ol>
+          <div class="incident-close">
+            <p class="statement">{c.timeline.total}</p>
+            <ProductShot class="history-shot" light={history.light} dark={history.dark} alt={c.timeline.historyCaption} caption={c.timeline.historyCaption} open={c.openImage} sizes="(max-width: 900px) calc(100vw - 48px), 1216px" />
+            <a class="text-link" href={links.howItWorks} {...external}>{c.timeline.journey}<span class="visually-hidden"> ({c.newTab})</span></a>
+          </div>
+        </div>
       </section>
-      <section id="questions" class="faq section frame" aria-labelledby="questions-title" data-reveal>
-        <div><h2 id="questions-title">{c.questionsHeading}</h2></div>
-        <div class="questions-list">{c.questions.map(([question, answer], index) => <details name="questions" open={index === 0}><summary>{question}<svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 8 5 5 5-5" /></svg></summary><p>{answer}</p></details>)}</div>
+
+      <section id="results" class="results section" aria-labelledby="results-title" data-reveal>
+        <div class="frame results-board">
+          <div class="tile tile-heading">
+            <h2 id="results-title">{c.results.heading}</h2>
+            <p>{c.results.text}</p>
+          </div>
+          {c.results.tiles.map(([figure, label]) => <div class="tile"><p class="tile-figure">{figure}</p><p class="tile-label">{label}</p></div>)}
+        </div>
+        <div class="frame results-more"><a class="text-link" href={links.ai} {...external}>{c.results.link}<span class="visually-hidden"> ({c.newTab})</span></a></div>
       </section>
-      <section id="early-access" class="access section" aria-labelledby="access-title" data-reveal>
-        <div class="access-inner frame"><div class="access-copy"><h2 id="access-title">{c.accessHeading}</h2><p>{c.accessText}</p><p class="prototype">{c.prototype}</p><a class="text-link" href="#product">{c.productHeading}</a></div><EarlyAccess locale={locale} client:visible /></div>
+
+      <section id="questions" class="faq section" aria-labelledby="questions-title" data-reveal>
+        <div class="frame faq-grid">
+          <h2 id="questions-title">{c.questionsHeading}</h2>
+          <div class="faq-list">
+            {c.questions.map(([question, answer], index) => <details name="questions" open={index === 0}><summary>{question}<span class="plus" aria-hidden="true" /></summary><p>{answer}</p></details>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="start" class="start section" aria-labelledby="start-title" data-reveal>
+        <div class="frame">
+          <h2 id="start-title" class="display-heading">{c.start.heading}</h2>
+          <div class="start-action">
+            <a class="button button-huge" href={links.signIn}><span class="button-label"><GitHubMark size={28} />{c.signIn}</span><svg class="button-arrow" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 11h14m-5-5 5 5-5 5" /></svg></a>
+            <p>{c.start.note}</p>
+          </div>
+          <ol class="start-steps">
+            {c.start.steps.map(([title, text]) => <li><h3>{title}</h3><p>{text}</p></li>)}
+          </ol>
+          <a class="text-link" href={links.githubApp} {...external}>{c.start.install}<span class="visually-hidden"> ({c.newTab})</span></a>
+        </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="frame">
-        <div class="footer-top">
-          <div class="footer-identity"><a class="brand footer-brand" href="#top" aria-label={c.top}><Brand /></a><p>{c.footer.description}</p></div>
-          <nav class="footer-column" aria-labelledby="footer-project-title">
-            <h2 id="footer-project-title">{c.footer.project}</h2>
-            <ul>
-              <li><a href="#product">{c.footer.overview}</a></li>
-              <li class="footer-planned"><span>pipesor-landing</span><span class="footer-note">{c.footer.repositoryPrivate}</span></li>
-              <li class="footer-planned"><span>pipesor-docs</span><span class="footer-note">{c.footer.docsPlanned}</span></li>
-            </ul>
-          </nav>
-          <nav class="footer-column" aria-labelledby="footer-contributors-title">
-            <h2 id="footer-contributors-title">{c.footer.contributors}</h2>
-            <ul><li><a href="https://github.com/Chaomeum">Jhon Galvez</a></li><li><a href="https://github.com/RamiroGuzmanCh">Ramiro Guzman</a></li></ul>
-          </nav>
-          <section class="footer-column footer-legal" aria-labelledby="footer-legal-title">
-            <h2 id="footer-legal-title">{c.footer.legal}</h2>
-            <ul><li class="footer-planned"><span>{c.footer.privacy}</span><span class="footer-note">{c.footer.pending}</span></li><li class="footer-planned"><span>{c.footer.terms}</span><span class="footer-note">{c.footer.pending}</span></li></ul>
-          </section>
+        <div class="footer-close">
+          <p class="brand footer-lockup" role="img" aria-label="Pipesor"><Brand /></p>
+          <p class="footer-description">{c.footer.description}</p>
         </div>
-        <div class="footer-bottom"><p class="footer-license">{c.footer.licensing}</p><a class="text-link" href="#top">{c.top}<span aria-hidden="true">↑</span></a></div>
-        <p class="footer-copyright">© 2026 {c.footer.copyright}</p>
+        <div class="footer-top">
+          <nav class="footer-column" aria-labelledby="footer-page-title"><h2 id="footer-page-title">{c.footer.product}</h2><ul>{c.nav.map((label, index) => <li><a href={sections[index]}>{label}</a></li>)}</ul></nav>
+          <nav class="footer-column" aria-labelledby="footer-about-title"><h2 id="footer-about-title">{c.footer.about}</h2><ul>{[links.howItWorks, links.ai, links.security].map((href, index) => <li><a href={href} {...external}>{c.footer.aboutLinks[index]}<span class="visually-hidden"> ({c.newTab})</span></a></li>)}</ul></nav>
+          <nav class="footer-column" aria-labelledby="footer-legal-title"><h2 id="footer-legal-title">{c.footer.legal}</h2><ul><li><a href={links.privacy} {...external}>{c.footer.privacy}<span class="visually-hidden"> ({c.newTab})</span></a></li><li><a href={links.terms} {...external}>{c.footer.terms}<span class="visually-hidden"> ({c.newTab})</span></a></li></ul></nav>
+          <nav class="footer-column" aria-labelledby="footer-contributors-title"><h2 id="footer-contributors-title">{c.footer.contributors}</h2><ul><li><a href="https://github.com/Chaomeum">Jhon Galvez</a></li><li><a href="https://github.com/RamiroGuzmanCh">Ramiro Guzman</a></li></ul></nav>
+        </div>
+        <p class="footer-license">{c.footer.licensing}</p>
+        <div class="footer-bottom"><p>© 2026 {c.footer.copyright}</p><a class="button button-tone" href="#top">{c.top}<span aria-hidden="true">↑</span></a></div>
       </div>
     </footer>
+    <a class="to-top" href="#top" aria-label={c.top} data-to-top><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M11 18V4m-6 6 6-6 6 6" /></svg></a>
     <ImageLightbox locale={locale} />
     <script>
+      const root = document.documentElement;
+      root.dataset.motionReady = '1';
       const choices = [...document.querySelectorAll<HTMLInputElement>('input[name="theme"]')];
       const system = matchMedia('(prefers-color-scheme: dark)');
-      let preference = document.documentElement.dataset.preference || 'system';
+      let preference = root.dataset.preference || 'system';
       const apply = () => {
-        document.documentElement.dataset.theme = preference === 'system' ? (system.matches ? 'dark' : 'light') : preference;
-        document.documentElement.dataset.preference = preference;
+        root.dataset.theme = preference === 'system' ? (system.matches ? 'dark' : 'light') : preference;
+        root.dataset.preference = preference;
         choices.forEach(choice => { choice.checked = choice.value === preference; });
-        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', document.documentElement.dataset.theme === 'dark' ? '#0e1116' : '#f7f8fa');
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', root.dataset.theme === 'dark' ? '#0b0c0e' : '#fafafa');
       };
       apply();
-      choices.forEach(choice => choice.addEventListener('change', () => { if (choice.checked) { preference = choice.value; apply(); try { localStorage.setItem('pipesor.theme', preference); } catch {} } }));
+      choices.forEach(choice => choice.addEventListener('change', () => { if (choice.checked) switchTheme(choice.value); }));
       system.addEventListener('change', () => { if (preference === 'system') apply(); });
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+      // Theme changes cross-fade where view transitions exist.
+      const switchTheme = (next: string) => {
+        preference = next;
+        const doc = document as Document & { startViewTransition?: (update: () => void) => unknown };
+        if (doc.startViewTransition && !reduced.matches) doc.startViewTransition(apply); else apply();
+        try { localStorage.setItem('pipesor.theme', preference); } catch {}
+      };
       const language = document.querySelector<HTMLAnchorElement>('[data-language]')!;
       const preserveAnchor = () => { language.hash = window.location.hash; };
       preserveAnchor();
       window.addEventListener('hashchange', preserveAnchor);
-      document.querySelector('[data-history-link]')?.addEventListener('click', () => {
-        const history = document.querySelector<HTMLInputElement>('#view-history')!;
-        history.checked = true;
-        history.focus({ preventScroll: true });
-      });
-      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-      if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+      // Scroll feedback: reading progress, the current section in the navigation, a raised header,
+      // a header that steps aside on phones while reading down, and the back-to-top button.
+      const header = document.querySelector<HTMLElement>('.site-header')!;
+      const progress = document.querySelector<HTMLElement>('.scroll-progress span')!;
+      const toTop = document.querySelector<HTMLElement>('[data-to-top]')!;
+      const footer = document.querySelector<HTMLElement>('.site-footer')!;
+      const spyLinks = [...document.querySelectorAll<HTMLAnchorElement>('[data-spy]')];
+      const spied = spyLinks.map(link => document.querySelector<HTMLElement>(link.hash)!);
+      const narrow = matchMedia('(max-width: 900px)');
+      let lastY = window.scrollY; let ticking = false;
+      const onScroll = () => {
+        ticking = false;
+        const y = window.scrollY; const max = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
+        header.toggleAttribute('data-raised', y > 8);
+        header.toggleAttribute('data-away', narrow.matches && !reduced.matches && y > 240 && y > lastY && !header.contains(document.activeElement));
+        // The footer has its own back-to-top button, so the floating one leaves when the footer arrives.
+        toTop.toggleAttribute('data-shown', y > window.innerHeight * 1.2 && footer.getBoundingClientRect().top > window.innerHeight);
+        const line = window.innerHeight * 0.4;
+        spyLinks.forEach((link, index) => {
+          const box = spied[index].getBoundingClientRect();
+          if (box.top <= line && box.bottom > line) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+        });
+        lastY = y;
+      };
+      window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+      window.addEventListener('resize', onScroll);
+      // The browser may jump to the URL's anchor after this script runs.
+      window.addEventListener('load', onScroll);
+      window.addEventListener('hashchange', () => requestAnimationFrame(onScroll));
+      onScroll();
+      // The showcase tab indicator slides to the checked tab.
+      const tabs = document.querySelector<HTMLElement>('.showcase-tabs');
+      const indicator = tabs?.querySelector<HTMLElement>('.tab-indicator');
+      const placeIndicator = () => {
+        const label = tabs?.querySelector<HTMLElement>('input:checked + span');
+        if (!tabs || !indicator || !label) return;
+        const base = tabs.getBoundingClientRect(); const box = label.getBoundingClientRect();
+        indicator.style.width = `${box.width}px`;
+        indicator.style.transform = `translate(${box.left - base.left}px, ${box.bottom - base.top - 2}px)`;
+        tabs.classList.add('has-indicator');
+      };
+      tabs?.addEventListener('change', placeIndicator);
+      window.addEventListener('resize', placeIndicator);
+      document.fonts?.ready.then(placeIndicator);
+      placeIndicator();
+      if (root.classList.contains('motion-ok') && 'IntersectionObserver' in window) {
         const observer = new IntersectionObserver(entries => entries.forEach(entry => {
           if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target); }
-        }), { threshold: 0.08 });
+        }), { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
         document.querySelectorAll('[data-reveal]').forEach(section => observer.observe(section));
+      } else {
+        root.classList.remove('motion-ok');
       }
     </script>
   </body>

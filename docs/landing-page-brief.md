@@ -3,7 +3,7 @@
 **Audience:** landing-page agent running a Taste Skill review
 **Sources of truth:** `pipesor-frontend` repository (tokens, brand, product scope) and the approved Paper file **Pipesor** when accessible
 **Date:** 30 October 2026
-**Status:** working brief — open decisions in §11 must be confirmed before publishing
+**Status:** working brief — open decisions in §11 must be confirmed before publishing; §11 ends with the decisions of 24 November 2026, which supersede parts of this brief
 
 ---
 
@@ -286,6 +286,16 @@ Owner response: GitHub Actions may be referenced by its official name to describ
 
 10. Whether "Insights" may be presented before its metrics are finalized, and with what provisional label.
 Owner response: Insights may be presented as an experimental prototype capability under the label “Insights Preview”. Any visualizations must use clearly identified illustrative demo data. Do not present provisional metrics as validated product results or imply that analytics capabilities are production-ready.
+
+### Decisions of 24 November 2026
+
+These owner decisions supersede §2 (claim rules about fixtures, confidence and unimplemented features), §5 (tokens and typography), §11.1 (primary CTA), §11.3 (screenshots) and §11.7 (legal links). See the [Ink on paper redesign](ink-on-paper-redesign.md).
+
+- The product is open at the dashboard; the primary action is "Sign in with GitHub" / "Entrar con GitHub". The early-access form preview is removed.
+- The footer links the dashboard's public Privacy policy, Terms of use, How it works, AI transparency and Security pages.
+- The landing follows the product's "Ink on paper" design system (`pipesor-frontend` `src/app/styles/tokens.css`, Geist and Geist Mono) and may be bold to win attention.
+- Screenshots come from the deployed dashboard, using only the public `Chaomeum/pipesor-demo` repository.
+- Claims follow the dashboard's About pages: no confidence score, reviews are Confirmed, Corrected or Rejected, and no demo fixtures remain.
 
 ---
 
