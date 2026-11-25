@@ -1,7 +1,5 @@
 ---
-import '@fontsource/sora/latin-400.css';
-import '@fontsource/sora/latin-500.css';
-import '@fontsource/sora/latin-600.css';
+import '../styles/fonts.css';
 import '../styles/global.css';
 import Brand from './Brand.astro';
 import type { Locale } from '../i18n/content';
@@ -13,13 +11,13 @@ const copy = locale === 'es' ? {
   title: 'Página no encontrada',
   description: 'La página que buscas no está disponible. Puedes volver al inicio o explorar el producto.',
   home: 'Volver al inicio',
-  product: 'Explorar el producto',
+  product: 'Ver el diagnóstico',
   navigation: 'Enlaces de recuperación',
 } : {
   title: 'Page not found',
   description: 'The page you are looking for is unavailable. You can return home or explore the product.',
   home: 'Back to home',
-  product: 'Explore the product',
+  product: 'See the diagnosis',
   navigation: 'Recovery links',
 };
 ---
@@ -47,7 +45,7 @@ const copy = locale === 'es' ? {
       <p>{copy.description}</p>
       <nav aria-label={copy.navigation}>
         <a class="button" href={home}>{copy.home}</a>
-        <a class="text-link" href={`${home}#product`}>{copy.product}</a>
+        <a class="text-link" href={`${home}#diagnosis`}>{copy.product}</a>
       </nav>
     </main>
   </body>
@@ -57,5 +55,6 @@ const copy = locale === 'es' ? {
   .recovery-header { padding-block: 32px; }
   .recovery { padding-block: 64px; }
   .recovery p { margin-top: 24px; max-width: 60ch; }
-  .recovery nav { margin-top: 32px; align-items: center; flex-wrap: wrap; }
+  .recovery h1 { font-size: var(--step-heading); line-height: 1.05; letter-spacing: -.035em; }
+  .recovery nav { display: flex; gap: 16px 28px; margin-top: 32px; align-items: center; flex-wrap: wrap; }
 </style>

@@ -1,0 +1,13 @@
+---
+/**
+ * GitHub's mark from Primer Octicons, GitHub's own icon set, inlined at build
+ * time. It identifies the GitHub integration in sign-in actions only. GitHub's
+ * brand rules apply: monochrome, unmodified, less prominent than the Pipesor
+ * logo, and never implying endorsement (https://brand.github.com/foundations/logo).
+ */
+import octicons from '@primer/octicons';
+interface Props { size?: number; }
+const { size = 20 } = Astro.props;
+const svg = octicons['mark-github'].toSVG({ width: size, height: size, class: 'github-mark' }) // Octicons mark their SVG aria-hidden by default.;
+---
+<Fragment set:html={svg} />

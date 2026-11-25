@@ -11,7 +11,7 @@ This grant is limited to source code. It does not license the Pipesor name, logo
 - The social card at `public/social-card.png` and other social-media artwork.
 - The Pipesor name, logo, brand system and visual identity, wherever used.
 
-The license does not extend to third-party assets or dependencies. Their respective license terms and notices continue to apply. For example, font license notices in `public/licenses/` are retained and govern those font files.
+The license does not extend to third-party assets or dependencies. Their respective license terms and notices continue to apply. For example, the Geist font files in `src/fonts/` are governed by the SIL Open Font License notice in `public/licenses/Geist-OFL.txt`.
 
 ## Website notices
 

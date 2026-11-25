@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+interface Props {
+  light: ImageMetadata;
+  dark: ImageMetadata;
+  alt: string;
+  caption: string;
+  open: string;
+  eager?: boolean;
+  sizes?: string;
+  class?: string;
+}
+const { light, dark, alt, caption, open, eager = false, sizes = '(max-width: 900px) calc(100vw - 48px), 640px', class: className } = Astro.props;
+const widths = [480, 800, 1200, 1600, light.width].filter((width, index, all) => width <= light.width && all.indexOf(width) === index);
+---
+<figure class:list={['shot', className]}>
+  <button
+    type="button"
+    class="image-link"
+    data-lightbox-light={light.src}
+    data-lightbox-dark={dark.src}
+    data-image-width={light.width}
+    data-image-height={light.height}
+    aria-label={`${open}: ${caption}`}
+    aria-haspopup="dialog"
+    aria-controls="image-viewer"
+    disabled
+  >
+    <Image class="shot-light" src={light} alt={alt} widths={widths} sizes={sizes} loading={eager ? 'eager' : 'lazy'} />
+    <Image class="shot-dark" src={dark} alt={alt} widths={widths} sizes={sizes} loading="lazy" />
+    <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 4h5v5M9 18H4v-5M18 4l-5.5 5.5M4 18l5.5-5.5" /></svg>{open}</span>
+  </button>
+  <figcaption>{caption}</figcaption>
+</figure>
